@@ -435,3 +435,10 @@
 
 # x = sum(1, 2)
 # print("Sum of two numbers is: ", x)
+
+# return keyword returning nothing ---> returns "None"
+def m1():
+    print("This function is returning nothing.")
+
+x = m1()
+print(x)
