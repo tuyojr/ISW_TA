@@ -543,3 +543,10 @@ factorial of every number.
 #     print("We assigned function to variable")
 # sum = add
 # sum()
+
+# # pass a function as a parameter to another function
+# def display(x):
+#     print("This is display function")
+# def message():
+#     print("This is message function")
+# display(message())
