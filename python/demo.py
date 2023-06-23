@@ -664,10 +664,10 @@ factorial of every number.
 #         return num*power(num, n-1)
 # print(power(2, 3))
 
-# recursive function to get the product of a string of numbers '1234'
-def product(string):
-    if len(string) == 0:
-        return 1
-    else:
-        return int(string[0]) * product(string[1:])
-print(product("1234"))
+# # recursive function to get the product of a string of numbers '1234'
+# def product(string):
+#     if len(string) == 0:
+#         return 1
+#     else:
+#         return int(string[0]) * product(string[1:])
+# print(product("1234"))
