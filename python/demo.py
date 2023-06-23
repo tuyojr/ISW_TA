@@ -638,3 +638,12 @@ factorial of every number.
 #     print(a)
 #     print(globals()["a"])
 # m()
+
+# # recursive function to print 1 to 5
+# def p(n):
+#     if n == 6:
+#         return
+#     else:
+#         print(n)
+#         p(n +1)
+# p(1)
