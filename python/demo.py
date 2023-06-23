@@ -572,3 +572,10 @@ factorial of every number.
 #     print(item, "cost is ${}".format(price))
 # cart(item = "DB5", price = 1000000)
 # cart(price = 152670, item = "Mustang")
+
+# # default arguments
+# def cart(item="MTN 2.5GB for 2days", price=1):
+#     print(item, "cost is ${}".format(price))
+# cart(item = "DB5", price = 1000000)
+# cart(price = 152670, item = "Mustang")
+# cart()
