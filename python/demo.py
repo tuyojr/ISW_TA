@@ -405,3 +405,9 @@
 #     print(1)
 # else:
 #     print(-1)
+
+# Defining functions
+def sum(a, b):
+    print("Sum of two values =", (a + b))
+
+sum(int(input("Enter first number: ")), int(input("Enter second number: ")))
