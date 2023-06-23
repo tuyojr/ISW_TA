@@ -589,3 +589,14 @@ factorial of every number.
 # total_cost(100, 200)
 # total_cost(110, 226, 311)
 # total_cost(11,)
+
+# # keyword variable-length arguments
+# def print_kwargs(**kwargs):
+#     print(kwargs)
+# print_kwargs(id=1, name="Jack", qualification="MBA")
+
+# def m1(**x):
+#     for k, v in x.items():
+#         print(k, "=", v)
+# m1(a=10, b=20, c=30)
+# m1(id=100, name="Subbalaxmi")
