@@ -630,3 +630,11 @@ factorial of every number.
 #     print("a from function n(): ", a)
 # m()
 # n()
+
+# # globals() buitl-in function
+# a = 1
+# def m():
+#     a = 2
+#     print(a)
+#     print(globals()["a"])
+# m()
