@@ -464,3 +464,13 @@
 
 # execute = search(input("Enter a sentence: "), input("Enter a word to search: "))
 # print(execute)
+
+# # write a program which enters a number and prints the factorial of that number. Use a function.
+# def factorial(number):
+#     factorial = 1
+#     for num in range(1, number + 1):
+#         factorial = factorial * num
+#     return factorial
+
+# num = factorial(int(input("Enter a positive integer: ")))
+# print(num)
