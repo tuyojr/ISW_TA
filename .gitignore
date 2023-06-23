@@ -1,4 +1,4 @@
-python/__pycache__/
+python/__*/
 ./.git/
 ./.gitignore
-python/.vscode/
+python/.**/
