@@ -655,3 +655,11 @@ factorial of every number.
 #     else:
 #         return n * factorial(n - 1)
 # print(factorial(5))
+
+# # recursive function to get the a number raised to a power
+# def power(num, n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return num*power(num, n-1)
+# print(power(2, 3))
