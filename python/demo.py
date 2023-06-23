@@ -519,3 +519,21 @@ factorial of every number.
 #     for number in range(start, end + 1):
 #         print(factorial(number))
 # display(int(input("Enter the start number: ")), int(input("Enter the end number: ")))
+
+# # write a program which displays all spy numbers between 1 and 1000
+# # spy number ---> sum of digits == product of digits
+# def product(num):
+#     total = 1
+#     for numbers in str(num):
+#         total *= int(numbers)
+#     return total
+# def sum(num):
+#     total = 0
+#     for numbers in str(num):
+#         total += int(numbers)
+#     return total
+# def spy_number():
+#     for numbers in range(1, 1001):
+#         if (product(numbers) == sum(numbers)):
+#             print(numbers)
+# spy_number()
