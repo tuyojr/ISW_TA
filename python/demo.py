@@ -492,3 +492,30 @@
 #     print("Second function information.")
 #     m1()
 # m2()
+
+"""
+write a program which enters the start and end numbers. Pass the
+numbers to a function "display". The display function should print
+factorial of every number.
+"""
+
+# def numbers(start, end):
+#     return start, end
+# def factorial():
+#     num1, num2 = numbers(int(input("Enter the start number: ")), int(input("Enter the end number: ")))
+#     for number in range(num1, num2 + 1):
+#         factorial = 1
+#         for num in range(1, number + 1):
+#             factorial = factorial * num
+#         print(factorial)
+# factorial()
+
+# def factorial(num):
+#     factorial = 1
+#     for number in range(1, num + 1):
+#         factorial = factorial * number
+#     return factorial
+# def display(start, end):
+#     for number in range(start, end + 1):
+#         print(factorial(number))
+# display(int(input("Enter the start number: ")), int(input("Enter the end number: ")))
