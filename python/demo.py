@@ -484,3 +484,11 @@
 # x, y = m1(10,5)
 # print("Sum of a and b is: ", x)
 # print("Difference of a and b is: ", y)
+
+# # function calling another function
+# def m1():
+#     print("First function information.")
+# def m2():
+#     print("Second function information.")
+#     m1()
+# m2()
