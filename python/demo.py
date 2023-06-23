@@ -600,3 +600,15 @@ factorial of every number.
 #         print(k, "=", v)
 # m1(a=10, b=20, c=30)
 # m1(id=100, name="Subbalaxmi")
+
+# # local variables
+# def m():
+#     a = 1
+#     print(a)
+# m()
+
+# # global variables
+# b = 10
+# def n():
+#     print(b)
+# n()
