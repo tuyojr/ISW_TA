@@ -406,8 +406,24 @@
 # else:
 #     print(-1)
 
-# Defining functions
-def sum(a, b):
-    print("Sum of two values =", (a + b))
+# # Defining functions
+# def sum(a, b):
+#     print("Sum of two values =", (a + b))
 
-sum(int(input("Enter first number: ")), int(input("Enter second number: ")))
+# sum(int(input("Enter first number: ")), int(input("Enter second number: ")))
+
+# # Write a function that executes based on the operator passed in
+# def sum(num1, num2, operator):
+#     if operator == '+':
+#         print("The sum is: ", (num1 + num2))
+#     elif operator == '-':
+#         print("The difference is: ", (num1 - num2))
+#     elif operator == '*':
+#         print("The multiplication is: ", (num1 * num2))
+#     elif operator == '/':
+#         print("The division is: ", (num1 / num2))
+
+# sum(20, 10, '+')
+# sum(20, 10, '-')
+# sum(20, 10, '*')
+# sum(20, 10, '/')
