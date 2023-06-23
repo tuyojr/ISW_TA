@@ -558,3 +558,11 @@ factorial of every number.
 #         print("This is the inner function")
 #     second()
 # first()
+
+# # the function can return another function
+# def first():
+#     def second():
+#         print("This function is the return type to the outer function")
+#     return second
+# x = first()
+# x()
