@@ -395,13 +395,13 @@
 #     if letter in s:
 #         print(letter, s.count(letter), end=' ')
 
-S = input("Enter a string: ")
-check1 = "*"
-check2 = "#"
+# S = input("Enter a string: ")
+# check1 = "*"
+# check2 = "#"
 
-if S.count(check1) == S.count(check2):
-    print(0)
-elif S.count(check1) > S.count(check2):
-    print(1)
-else:
-    print(-1)
+# if S.count(check1) == S.count(check2):
+#     print(0)
+# elif S.count(check1) > S.count(check2):
+#     print(1)
+# else:
+#     print(-1)
