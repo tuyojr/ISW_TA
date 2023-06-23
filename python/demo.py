@@ -427,3 +427,11 @@
 # sum(20, 10, '-')
 # sum(20, 10, '*')
 # sum(20, 10, '/')
+
+# # Using the return keyword
+# def sum(a, b):
+#     c = a + b
+#     return c
+
+# x = sum(1, 2)
+# print("Sum of two numbers is: ", x)
