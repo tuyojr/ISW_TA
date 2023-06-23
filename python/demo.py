@@ -443,14 +443,14 @@
 # x = m1()
 # print(x)
 
-# write a function to count the number of vowels in a string
-def vowels(user_input):
-    counter = 0
-    vowel = "aeiou"
-    for letter in user_input:
-        if letter in vowel:
-            counter += 1
-    return counter
+# # write a function to count the number of vowels in a string
+# def vowels(user_input):
+#     counter = 0
+#     vowel = "aeiou"
+#     for letter in user_input:
+#         if letter in vowel:
+#             counter += 1
+#     return counter
 
-word_to_check = vowels(input("Enter a word you want to count its vowels: "))
-print(word_to_check)
+# word_to_check = vowels(input("Enter a word you want to count its vowels: "))
+# print(word_to_check)
