@@ -550,3 +550,11 @@ factorial of every number.
 # def message():
 #     print("This is message function")
 # display(message())
+
+# # defining a function inside another function
+# def first():
+#     print("This is the outer function")
+#     def second():
+#         print("This is the inner function")
+#     second()
+# first()
