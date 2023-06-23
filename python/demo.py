@@ -647,3 +647,11 @@ factorial of every number.
 #         print(n)
 #         p(n +1)
 # p(1)
+
+# # recursive function to get the factorial of a number
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return n * factorial(n - 1)
+# print(factorial(5))
