@@ -474,3 +474,13 @@
 
 # num = factorial(int(input("Enter a positive integer: ")))
 # print(num)
+
+# # return multiple values from a python function
+# def m1(a, b):
+#     c = a + b
+#     d = a - b
+#     return c, d
+
+# x, y = m1(10,5)
+# print("Sum of a and b is: ", x)
+# print("Difference of a and b is: ", y)
