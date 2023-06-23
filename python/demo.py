@@ -537,3 +537,9 @@ factorial of every number.
 #         if (product(numbers) == sum(numbers)):
 #             print(numbers)
 # spy_number()
+
+# # Assign a function to a variable
+# def add():
+#     print("We assigned function to variable")
+# sum = add
+# sum()
