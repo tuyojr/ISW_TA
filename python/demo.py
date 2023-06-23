@@ -579,3 +579,13 @@ factorial of every number.
 # cart(item = "DB5", price = 1000000)
 # cart(price = 152670, item = "Mustang")
 # cart()
+
+# variable length arguments
+def total_cost(x, *y):
+    sum = 0
+    for i in y:
+        sum += i
+    print(x + sum)
+total_cost(100, 200)
+total_cost(110, 226, 311)
+total_cost(11,)
