@@ -566,3 +566,9 @@ factorial of every number.
 #     return second
 # x = first()
 # x()
+
+# # keyword arguments
+# def cart(item, price):
+#     print(item, "cost is ${}".format(price))
+# cart(item = "DB5", price = 1000000)
+# cart(price = 152670, item = "Mustang")
