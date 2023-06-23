@@ -612,3 +612,9 @@ factorial of every number.
 # def n():
 #     print(b)
 # n()
+# a = 10
+# b = 12
+# def m():
+#     print("a from function m(): ", a)
+#     print("b from function m(): ", b)
+# m()
