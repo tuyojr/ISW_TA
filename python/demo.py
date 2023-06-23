@@ -612,10 +612,21 @@ factorial of every number.
 # def n():
 #     print(b)
 # n()
-a = 10
-b = 12
-def m():
-    a = 1 # local variable overrides global variable
-    print("a from function m(): ", a)
-    print("b from function m(): ", b)
-m()
+# a = 10
+# b = 12
+# def m():
+#     a = 1 # local variable overrides global variable
+#     print("a from function m(): ", a)
+#     print("b from function m(): ", b)
+# m()
+# a = 10
+# b = 12
+# def m():
+#     global a # every statement would make use of the new variable for a
+#     a = 2 # local variable declared after global a is now the global variable
+#     print("a from function m(): ", a)
+# def n():
+#     a = 20
+#     print("a from function n(): ", a)
+# m()
+# n()
