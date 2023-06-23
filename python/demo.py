@@ -455,12 +455,12 @@
 # word_to_check = vowels(input("Enter a word you want to count its vowels: "))
 # print(word_to_check)
 
-# write a function to search for a word in a string. Return True or False
-def search(statement, word_to_search):
-    if word_to_search in statement:
-        return True
-    else:
-        return False
+# # write a function to search for a word in a string. Return True or False
+# def search(statement, word_to_search):
+#     if word_to_search in statement:
+#         return True
+#     else:
+#         return False
 
-execute = search(input("Enter a sentence: "), input("Enter a word to search: "))
-print(execute)
+# execute = search(input("Enter a sentence: "), input("Enter a word to search: "))
+# print(execute)
