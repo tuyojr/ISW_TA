@@ -2,3 +2,4 @@ python/__*/
 ./.git/
 ./.gitignore
 python/.**/
+.
