@@ -671,3 +671,34 @@ factorial of every number.
 #     else:
 #         return int(string[0]) * product(string[1:])
 # print(product("1234"))
+
+# lambda functions (anonymous functions)
+# a = lambda
+
+# # Generators --> functions that give a sequence of values as one iterable
+# def m():
+#     yield 'Mahesh'
+#     yield 'Suresh'
+# g = m()
+# print(g)
+# print(type(g))
+# for y in g:
+#     print(y)
+
+# def m(x, y):
+#     while x <= y:
+#         yield x
+#         x += 1
+# g = m(5, 10)
+# for y in g:
+#     print(y)
+
+# ASSIGNMENT print even numbers instead for the function above
+# def m(x, y):
+#     while x <= y:
+#         yield x
+#         x += 1
+# g = m(5, 10)
+# for y in g:
+#     if y % 2 == 0:
+#         print(y)
