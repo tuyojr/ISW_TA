@@ -749,3 +749,13 @@ factorial of every number.
 # print(names[2:5:2])
 # print(names[4::2])
 # print(names[3:5])
+
+# # accessing lists by using loops
+# a = [100, 200, 300, 400]
+# for x in a:
+#     print(x)
+
+# j = 0
+# while j < len(a):
+#     print(a[j])
+#     j = j + 1
