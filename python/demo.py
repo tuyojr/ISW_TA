@@ -897,9 +897,51 @@ factorial of every number.
 # print(id(x))
 # print(id(y))
 
-# # mathematical operators (onlt the '+' operator is used for lists)
+# # mathematical operators (the '+' operator is used for lists to concatenate lists)
 # # they must be of the same type
 # a = [1, 2, 3]
 # b = [4, 5, 6]
 # c = a + b
 # print(c)
+
+# # multiplication operator works to repeat elements in the list by said number of times
+# a = [1, 2, 3]
+# print(a)
+# print(2*a)
+
+# # comparison operators
+# # for int
+# # first, the type of values are checked, 
+# # second the elements are counted, 
+# # third one-by-one, the elements are checked
+# print([1, 2, 3] < [2, 2, 3]) # True
+# print([1, 2, 3] < [1, 2, 3]) # False
+# print([1, 2, 3] <= [1, 2, 3]) # True
+# print([1, 2, 3] < [1, 2, 4]) # True
+# print([1, 2, 3] < [0, 2, 3]) # False
+# print([1, 2, 3] == [1, 2, 3]) # True
+
+# # for strings
+# # case sensitive comparison 
+# # +ve LHS is behind RHS
+# # -ve LHS is ahead of RHS
+# # 0 LHS = RHS
+# # capitalized letters come before lowercase letters
+# # 1. the number of elements
+# # 2. the order of elements
+# # 3. the content of elements (case sensitive)
+# x = ["abc", "def", "ghi"]
+# y = ["abc", "def", "ghi"]
+# z = ["ABC", "DEF", "GHI"]
+# a = ["abc", "def", "ghi", "jkl"]
+# print(x == y) # True
+# print(x == z) # False
+# print(x == a) # False
+
+# # use of membership operator in lists
+# # in and not in
+# x = [10, 20, 30, 40, 50]
+# print(20 in x) # True
+# print(20 not in x) # False
+# print(90 in x) # False
+# print(90 not in x) # True
