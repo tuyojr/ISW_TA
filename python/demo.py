@@ -953,3 +953,8 @@ factorial of every number.
 # print(b[1])
 # print(b[2])
 # print(b[3])
+
+# nums = [[1, 2, 3, 4], [5, 6, 7, 8]]
+# for i in nums:
+#     for j in i:
+#         print(j, end=" ")
