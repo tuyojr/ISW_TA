@@ -742,3 +742,10 @@ factorial of every number.
 # l[0] = 20
 # print("After modifying l[0]: ", l[0])
 # print(l)
+
+# # accessing lists by using indexing and slicing
+# names = ["Prabhas", "Prashanth", "Sarav", 3, 4, 5]
+# print(names)
+# print(names[2:5:2])
+# print(names[4::2])
+# print(names[3:5])
