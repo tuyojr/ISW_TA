@@ -1005,3 +1005,33 @@ factorial of every number.
 # each_items_cost = [111, 222, 333, 444]
 # total_cost = reduce(lambda x, y : x + y, each_items_cost)
 # print(total_cost)
+
+# # list comprehension
+# # They are a precise way of creating a list using iterable objects like tubles,
+# # strings, lists. It is a concise way of creating a list.
+# x = [1, 2, 3, 4]
+# y = []
+# for i in x:
+#     y.append(i*2)
+# print(y)
+
+# g = [1, 2, 3, 4]
+# h = [i * 2 for i in g]
+# print(h)
+
+# s = range(1, 20, 3)
+# for i in s:
+#     print(i)
+# m = [x for x in s if x % 2 == 0]
+# print(m)
+
+# # write a list comprehension that extracts every element in the list with the letter "k" or "K"
+# a = ["Mick", "Jack", "Mohan", "Kelly"]
+# b = [i for i in a if "k" in i.lower()]
+# print(b)
+
+# # write a list comprehension that uses the reduce function to add each element to itself
+# from functools import reduce
+# c = [123, 475, 333, 111]
+# d = [reduce(lambda x, y: int(x) + int(y), str(i)) for i in c]
+# print(d)
