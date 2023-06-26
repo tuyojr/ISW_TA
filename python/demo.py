@@ -1035,3 +1035,67 @@ factorial of every number.
 # c = [123, 475, 333, 111]
 # d = [reduce(lambda x, y: int(x) + int(y), str(i)) for i in c]
 # print(d)
+
+# # Tuples
+# # Empty tuple
+# # Single value tuple
+# # Tuple with group of values
+# # By using tuple() function
+# employee_ids = (1, 2, 3, 4, 5)
+# print("same type of objects:", employee_ids)
+# print(type(employee_ids))
+
+# employee_ids_2 = 1, 2, 3, 4, 5
+# print("same type of objects:", employee_ids_2)
+# print(type(employee_ids_2))
+
+# employee_details = (1, "RGV", 1000.123)
+# print("different type of objects:", employee_details)
+
+# name = ("Sushanth")
+# print(type(name)) # int
+
+# num = (11)
+# print(type(num)) # int
+
+# name1 = ("Sushanth",)
+# print(type(name1)) # tuple
+
+# num1 = (11,)
+# print(type(num1)) # tuple
+
+# emp_id = ()
+# print(type(emp_id))
+
+# t = tuple(range(1, 10, 2))
+# print(t)
+
+# # we ca access tuples by indexing, slicing, and looping.
+# # tuples cannot be modified
+# t = (10, 20, 30, 40, 50, 60)
+# print(t[0])
+# print(t[-1])
+# # print(t[100]) # tuple index out of range error
+
+# t = (10, 20, 30, 40, 50, 60)
+# print(t[2:5])
+# print(t[2:100])
+# print(t[::2])
+
+# for i in t:
+#     print(i)
+
+# # concatenation of tuples
+# t1 = (10, 20, 30)
+# t2 = (40, 50, 60)
+# t3 = t1 + t2
+# print(t3)
+
+# t4 = (10, 20, 30)
+# t5 = t4*3
+# print(t5)
+
+# # important methods and functions of tuples
+# # len, count, index, sorted, min, max
+# t = (10, 20, 30, 40)
+# print(len(t))
