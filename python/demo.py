@@ -818,3 +818,88 @@ factorial of every number.
 # print("September transactions are:", sept_txns)
 # sept_txns.extend(august_txns)
 # print("August and September total transactions amount:", sum(sept_txns))
+
+# # remove() method ---> removes a specific item from a list. returns a ValueError
+# # if the item is not present in the list.
+# # it removes only the first occurence of that value
+# value = [1, 2, 3]
+# value.remove(1)
+# print(value)
+
+# value1 = [1, 2, 3, 1]
+# value1.remove(1)
+# print(value1)
+
+# # returns a Value Error
+# # value2 = [1, 2, 3, 1]
+# # value2.remove(10)
+# # print(value2)
+
+# # pop() method
+# # 1. takes the index of a value and returns it.
+# # 2. if an argument is not passed, the last element of the list is removed.
+# # 3. if an index is wrong, an IndexError pops up.
+
+# numbers = [1, 2, 3, 4, 5]
+# print(numbers.pop(1))
+# print(numbers)
+# print(numbers.pop())
+# print(numbers)
+# # print(numbers.pop(10)) # IndexError
+
+# # reverse() method
+# n = [1, 2, 3, 4, 'two']
+# print(n)
+# n.reverse()
+# print(n)
+
+# # sort() method
+# nums = [1, 4, 5, 2, 3]
+# nums.sort()
+# print(nums)
+
+# names = ["Suresh", "Ramesh", "Arjun"]
+# names.sort()
+# print(names)
+
+# # list aliasing and cloning
+# # aliasing
+# x = [10, 20, 30]
+# y = x
+# print(x)
+# print(y)
+# print(id(x))
+# print(id(y))
+# x[1] = 99
+# print(x)
+# print(y)
+# print(id(x))
+# print(id(y))
+
+# # cloning using slicing
+# x = [10, 20, 30]
+# y = x[:]
+# print(x)
+# print(y)
+# print(id(x))
+# print(id(y))
+# x[1] = 99
+# print(x)
+# print(y)
+# print(id(x))
+# print(id(y))
+
+# # cloning using copy() method
+# x = [10, 20, 30]
+# y = x.copy()
+# print(x)
+# print(y)
+# print(id(x))
+# print(id(y))
+
+# # mathematical operators (onlt the '+' operator is used for lists)
+# # they must be of the same type
+# a = [1, 2, 3]
+# b = [4, 5, 6]
+# c = a + b
+# print(c)
