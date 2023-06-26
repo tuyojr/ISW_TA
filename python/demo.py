@@ -958,3 +958,50 @@ factorial of every number.
 # for i in nums:
 #     for j in i:
 #         print(j, end=" ")
+
+# # lambda functions ---> they take two arguments LHS has what is returned, 
+# # RHS is the operation performed
+# # it is a single line definition of a function
+# #  it is applied in 3 methods which work with a list. (filter, map, reduce)
+# # 1.
+# x = lambda n : n + 2
+# print(x(6))
+# # 2.
+# y = lambda m, k : m + k
+# print(y(2, 3))
+# # 3.
+# z = lambda a, b, c : a + b - c
+# print(z(2, 3, 4))
+
+# # filter() method. It takes a function and a sequence and filters values from a sequence of values
+# # it takes a logic as a first argument and the second argument is a list
+# item_cost = [999, 888, 1100, 1200, 1300, 777]
+# gt_thousand = filter(lambda x : x > 1000, item_cost)
+# g = list(gt_thousand) # converted to a list because the default output is just a type 'filter'
+# print("Eligible for discount:", g)
+
+# # get all the values divisible by 3 from the item_cost
+# item_cost = [999, 888, 1100, 1200, 1300, 777]
+# gt_divisible = filter(lambda x : x % 3 == 0, item_cost)
+# costs = list(gt_divisible)
+# print(costs)
+
+# # get those elements which contain 1 as a digit
+# item_cost = [999, 888, 1100, 1200, 1300, 777]
+# gt_num = filter(lambda item_cost : '1' in str(item_cost), item_cost)
+# nums = list(gt_num)
+# print(nums)
+
+# # map() method is used to map a particular function onto the sequence of elements.
+# # It returns a new set of values. It takes a function and a sequence
+# without_gst_cost = [100, 200, 300, 400]
+# with_gst_cost = map(lambda x : x + 10, without_gst_cost)
+# x = list(with_gst_cost)
+# print("Without GST items costs:", without_gst_cost)
+# print("With GST items costs", x)
+
+# # reduce() function adds all the elememts of a list and returns just the sum.
+# from functools import reduce
+# each_items_cost = [111, 222, 333, 444]
+# total_cost = reduce(lambda x, y : x + y, each_items_cost)
+# print(total_cost)
