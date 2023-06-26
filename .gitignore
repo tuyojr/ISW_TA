@@ -3,3 +3,4 @@ python/__*/
 ./.gitignore
 python/.**/
 ..
+python/test.py
