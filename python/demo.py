@@ -702,3 +702,10 @@ factorial of every number.
 # for y in g:
 #     if y % 2 == 0:
 #         print(y)
+
+# importing modules
+import addmultiplication
+
+print(addmultiplication.x)
+print(addmultiplication.sum(10, 20))
+print(addmultiplication.multiplication(4, 5))
