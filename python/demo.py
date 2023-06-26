@@ -703,9 +703,25 @@ factorial of every number.
 #     if y % 2 == 0:
 #         print(y)
 
-# importing modules
-import addmultiplication
+# # aliasing a module
+# import addmultiplication as am
 
-print(addmultiplication.x)
-print(addmultiplication.sum(10, 20))
-print(addmultiplication.multiplication(4, 5))
+# print(am.x)
+# print(am.sum(10,20))
+# print(am.multiplication(4,5))
+
+# # reload function
+# import addmultiplication
+# from imp import reload
+
+# reload(addmultiplication)
+# reload(addmultiplication)
+# reload(addmultiplication)
+
+# # dir() function ---> lists all members of a current module
+# x = 10
+# y = 20
+# def f1():
+#     print("Hello")
+# print(dir("os"))
+# print(__name__)
