@@ -759,3 +759,62 @@ factorial of every number.
 # while j < len(a):
 #     print(a[j])
 #     j = j + 1
+
+# # important functions or methods of lists
+# # len() function
+# n = [1, 2, 3, 4, 5]
+# print(len(n))
+
+# # count() method
+# n = [1, 2, 3, 4, 5, 5, 5, 3]
+# print(n.count(5))
+# print(n.count(3))
+# print(n.count(2))
+
+# # append() method ---> adds elements to the end of the list
+# l = []
+# l.append("Ramesh")
+# l.append("Suresh")
+# l.append("Naresh")
+# print(l)
+
+# # insert() ---> takes two arguments 1. index || 2. element
+# """
+# 1. if the specified index is greater than the max index, then the element 
+# will be inserted at the last position
+# 2. if the specified index is smaller than the min index, then the element
+# will be inserter at the first position
+# """
+# n = [10, 20, 30, 40, 50]
+# n.insert(0, 76)
+# n.insert(-1, 100)
+# # n.insert(101) # returns TypeError, you must provide two arguments
+# print(n)
+
+# x = [10, 20, 30, 40]
+# print(x) # [10, 20, 30, 40]
+# x.insert(1, 111)
+# print(x) # [10, 111, 20, 30, 40]
+# x.insert(-1,222)
+# print(x) # [10, 111, 20, 30, 222, 40]
+# x.insert(10,333)
+# print(x) # [10, 111, 20, 30, 222, 40, 333]
+# x.insert(-10, 444)
+# print(x) # [444, 10, 111, 20, 30, 222, 40, 333]
+
+# # extend() method ---> items in one list can be added to another
+# # 1.
+# j1 = [1, 2, 3]
+# j2 = ["Rahul", "Rakesh", "Regina"]
+# print("Before extend, j1 is:", j1)
+# print("Before extend, j2 is:", j2)
+# j2.extend(j1)
+# print("Afetr extend, j1 is:", j1)
+# print("After extend, j2 is:", j2)
+# # 2.
+# august_txns = [100, 200, 500, 600, 400, 500, 900]
+# sept_txns = [111, 222, 333, 600, 790, 100, 200]
+# print("August month transactions are:", august_txns)
+# print("September transactions are:", sept_txns)
+# sept_txns.extend(august_txns)
+# print("August and September total transactions amount:", sum(sept_txns))
