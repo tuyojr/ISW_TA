@@ -725,3 +725,20 @@ factorial of every number.
 #     print("Hello")
 # print(dir("os"))
 # print(__name__)
+
+# # creating a list with elements
+# names = ["Mohan", "Prasad", "Ramesh", "Mohan", 10, 20, True, None]
+# print(names)
+
+# # creatin a list using list() function
+# r = range(0, 10)
+# l = list(r)
+# print(l)
+
+# # list mutability
+# l = [1, 2, 3, 4, 5]
+# print(l)
+# print("Before modifying l[0]: ", l[0])
+# l[0] = 20
+# print("After modifying l[0]: ", l[0])
+# print(l)
