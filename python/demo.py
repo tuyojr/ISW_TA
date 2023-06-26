@@ -945,3 +945,11 @@ factorial of every number.
 # print(20 not in x) # False
 # print(90 in x) # False
 # print(90 not in x) # True
+
+# # nested list
+# a = [80, 90]
+# b = [10, 20, 30, a]
+# print(b[0])
+# print(b[1])
+# print(b[2])
+# print(b[3])
