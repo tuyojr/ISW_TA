@@ -1139,3 +1139,44 @@ factorial of every number.
 # # [filter(lambda x : x > 12, x)]
 # y = [i for i in x if i > 12]
 # # print(y)
+
+# # important methods and functions of tuples
+# # len, count, index, sorted, min, max CONTD
+# t = (10, 20, 10, 20)
+# print(t.count(10))
+# print(t.index(10))
+# # print(t.index(30)) # ValueError
+# tup = (40, 10, 30, 20)
+# tup2 = sorted(tup)
+# tup3 = sorted(tup, reverse=True)
+# print(tup)
+# print(tup2)
+# print(tup3)
+
+# # write a program which enters 5 names in a list. Sort the list based on the string length.
+# names = []
+# for i in range(5):
+#     names.append(input("Enter a name: "))
+# print(names)
+# names.sort(key=len)
+# print(names)
+
+# t = (40, 10, 30, 20)
+# print(min(t))
+# print(max(t))
+
+# # tuple packing and unpacking
+# a, b, c, d = 10, 20, 30, 40
+# t = a, b, c, d
+# print(t)
+# tup = (10, 20, 30, 40)
+# e, f, g, h = tup
+# print("e=", e, "f=", f, "g=", g, "h=", h)
+
+# # tuple comprehenshion ---> it is not suported in python
+# t = (x ** 2 for x in range(1,6)) # returns a generator object in 't'. We need to run it using a loop
+# print(t)
+# for x in t:
+#     print(x)
+
+# list objects are mutable and tuple objects are immutable
