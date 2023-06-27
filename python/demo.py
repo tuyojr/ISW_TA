@@ -1099,3 +1099,43 @@ factorial of every number.
 # # len, count, index, sorted, min, max
 # t = (10, 20, 30, 40)
 # print(len(t))
+
+# # Q1. Concatenate two lists index-wise
+# # Expected output ---> ["My", "name", "is", "Kelly"]
+# list1 = ["M", "na", "i", "Ke"]
+# list2 = ["y", "me", "s", "lly"]
+# # # list3 = [list1[i] + list2[i] for i in range(min(len(list1), len(list2)))]
+# list3 = map(lambda x, y: x + y, list1, list2)
+# list4 = list(list3)
+# print(list4)
+
+# # Q2. Remove all occurences of a specific item from a list
+# # Expected output ---> [5, 15, 25, 50]
+# list1 = [5, 20, 15, 20, 25, 50, 20]
+# list2 = [i for i in list1 if i != 20]
+# print(list2)
+
+# # Q3. Create a string made of the middle three characters
+# # Expected output ---> 1. Dip  2. Son
+# str1 = "JhonDipPeta"
+# str2 = "JaSonAy"
+# def mid_string(word):
+#     return word[int(len(word)/2)-1:int(len(word)/2)+2]
+# print(mid_string(str1))
+# print(mid_string(str2))
+
+# # Q4. Write a program to create a recursive function to calculate the sum of numbers from 0 to 10
+# # Expected Output ---> 55
+# def num_sum(num):
+#     if num == 0:
+#         return 0
+#     else:
+#         return num + num_sum(num - 1)
+# print(num_sum(10))
+
+# # Q5.Find the largest item from a given list using list comprehension
+# # Expected output ---> 24
+# x = [4, 6, 8, 24, 12, 2]
+# # [filter(lambda x : x > 12, x)]
+# y = [i for i in x if i > 12]
+# # print(y)
