@@ -1180,3 +1180,204 @@ factorial of every number.
 #     print(x)
 
 # list objects are mutable and tuple objects are immutable
+
+# # how to create a dictionary
+# d = {1: "Ramesh", 2: "Arjun", 3: "Nireekshan"}
+# print(d)
+
+# dj = {}
+# dj[1] = "Gigamesh"
+# dj[2] = "Timothy"
+# dj[3] = "Yorkshire"
+# print(dj)
+
+# # accessing dictionaries
+# d = {1: "Ramesh", 2: "Arjun", 3: "Nireekshan"}
+# print(d[1])
+# print(d[2])
+# print(d[3])
+# print(d[10]) # KeyError
+
+# # how to handle KeyError
+# d = {1: "Ramesh", 2: "Arjun", 3: "Nireekshan"}
+# if 400 in d:
+#     print(d[400])
+# else:
+#     print("key not found")
+
+# # working with dictionary
+# d = {}
+# n = int(input("Enter number of employees: "))
+# i = 1
+# while i <= n:
+#     name = input("Enter Employee Name: ")
+#     salary = input("Enter Employee Salary: ")
+#     d[name] = salary
+#     i = i + 1
+# for x in d:
+#     print("The name is:", x, "and the salary is:", d[x])
+# print(d)
+
+# # updating a dictionay
+# # dictionary[key] = value
+# # if the key is not available, it is added to the end of the dictionary
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print("Old dictionary:", d)
+# d[10] = "Hari"
+# print("Added key-value(10: Hari) pair to dictionary:", d)
+
+# # if the key is existing, the value is replaced
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print("Old dictionary:", d)
+# d[3] = "Hari"
+# print("Updated value of key 3 pair to dictionary:", d)
+
+# # removing or deleting elements from the dictionary
+# # 1. with the del keyword or del() function
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print("Before deleting key from dictionary:", d)
+# del d[1]
+# print("After deleting key from dictionary:", d)
+
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print("Before deleting key from dictionary:", d)
+# del(d[1])
+# print("After deleting key from dictionary:", d)
+
+# # 2. using the clear() method
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print("Before deleting key from dictionary:", d)
+# d.clear()
+# print("After deleting key from dictionary:", d)
+
+# # delete total dictionary object
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print("Before deleting key from dictionary:", d)
+# del d
+# # print("After deleting key from dictionary:", d) # NameError
+
+# # functions and methods of dictionary
+# # dict() function,
+# d = dict()
+# print(d)
+# print(type(d))
+
+# # dict({key1: value1, key2: value2}) function,
+# d = dict({1: "Ramesh", 2: "Arjun", 3: "Mahesh"})
+# print(d)
+
+# # dict([tuple1, tuple2]) function,
+# d = dict([(1, "Ramesh"), (2, "Arjun"), (3, "Mahesh")])
+# print(d)
+
+# # len() function ---> talks about the number of key-value pairs
+# d = dict([(1, "Ramesh"), (2, "Arjun"), (3, "Mahesh")])
+# print("length of dictionary:", len(d))
+
+# # get() method ---> returns the value of the specified key
+# # it doesn't give any error if the key is not present
+# # 1. if the key is present, it returns the value
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print(d.get(1))
+# print(d.get(100))
+# # 2. if the key is not present, it returns None or the specified default value
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print(d.get(1))
+# print(d.get(100, "No key Found"))
+
+# # pop() method can be used to remove the key-value pair from the dictionary and displays it
+# # if the specified key is not available, you get a KeyError dic.pop(key)
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print("Before pop:", d)
+# d.pop(1)
+# print("After pop:", d)
+# # print(d.pop(100)) # KeyError
+# print(d.pop(100, "No key found")) # No key found
+# d.pop()
+# # print(d) # TypeError
+
+# # popitem() method returns both the and the value
+# # if the dictionary is empty, we get a KeyError
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print("Before popitem:", d)
+# d.popitem()
+# print("After popitem:", d)
+
+# d = {}
+# d.popitem()
+# # print(d) # KeyError
+
+# # keys() method extracts all the keys in form of a list.
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print(d)
+# for k in d.keys():
+#     print(k)
+
+# # values() method extracts all the values in form of a list.
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# print(d)
+# for v in d.values():
+#     print(v)
+# d = {
+#     1: ["A", 300, "green"],
+#     2: ["B", 400, "blue"],
+#     3: ["C", 500, "red"]
+# }
+# for x, y in d.items():
+#     for i in y:
+#         print(i, end=" ")
+
+# # items() method gives a key-value pair in the form of tuples
+# d = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# for k, v in d.items():
+#     print(k, "---", v)
+
+# # copy() method can create an exact cloned copy of the dictionary
+# d1 = {1: "Ramesh", 2: "Arjun", 3: "Mahesh"}
+# d2 = d1.copy()
+# print(d1)
+# print(d2)
+# print(id(d1))
+# print(id(d2))
+
+# # dictionary comprehension
+# squares = {a:a*a for a in range(1,6)}
+# print(squares)
+
+# l = ["John", "Samuel", "Eke", "Oluwatobi"]
+# d = {names[0].upper():names for names in l}
+# print(d)
+
+# # write a program which has a list of trainees. The name should be the full name of the person.
+# # create a dictionary where the initial is the key and the name is the value
+# trainees = ["Naomi Mary Willie", "Ebenezer Samuel Ajayi", "Chiamaka Shileakanwa Ukwuoma"]
+# def initial_extractor(names):
+#     name = names.split(" ")
+#     initial = ""
+#     for n in name:
+#         initial += n[0].upper()
+#     return initial
+# d = {initial_extractor(trainee):trainee for trainee in trainees}
+# print(d)
+
+# # write a program which enters a string and using dictionary comprehension store the string as the key
+# # and the count as the value
+
+# user_input = int(input("Enter number of words: "))
+# n = 1
+# d = {}
+# while n <= user_input:
+#     word = input("Enter a word: ")
+#     d[word] = len(word)
+#     n = n + 1
+# print(d)
+
+# write a program to count the repeated characters in the string "thequickbrowfoxjumpsoverthelazydog"
+# and store them in a dictionary
+# word = "thequickbrownfoxjumpsoverthelazydog"
+# d = {}
+# letter_to_count = input("Enter the letters you want to count separated by space: ")
+# letter = letter_to_count.split(" ")
+# for l in letter:
+#     d[l] = word.count(l)
+# print(d)
