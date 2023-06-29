@@ -4,3 +4,4 @@ python/__*/
 python/.**/
 ..
 python/test.py
+.vscode/
