@@ -1714,3 +1714,11 @@ factorial of every number.
 #     print("else block")
 # finally:
 #     print("finally block")
+
+# # custom exceptions
+# try:
+#     x = int(input("Eneter a positive integer: "))
+#     if x < 0:
+#         raise ValueError(x)
+# except ValueError as e:
+#     print(f"You have provided {e}. Please run the program again and enter a positive integer.")
