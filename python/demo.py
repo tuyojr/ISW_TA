@@ -1792,3 +1792,15 @@ factorial of every number.
 #     f.write("Python\n")
 #     print("Is File Closed:", f.closed)
 # print("Is File Closed:", f.closed)
+
+# # seek and tell methods
+# # tell displays the current position of the cursor or pointer
+# # in the file
+# # seek moves the cursor or pointer to a desired position
+# with open("demo.txt", "r") as f:
+#     print(f.tell()) # position 0
+#     print(f.read(2))
+#     print(f.tell()) # position 2
+#     print(f.read(3))
+#     print(f.tell()) # position 5
+# print("Is file closed?", f.closed)
