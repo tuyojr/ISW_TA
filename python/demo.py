@@ -1784,3 +1784,11 @@ factorial of every number.
 # for line in lines:
 #     print(line, end='')
 # f.close()
+
+# # with keyword for opening and closing a file automatically
+# with open("text.txt", "w") as f:
+#     f.write("Welcome\n")
+#     f.write("to\n")
+#     f.write("Python\n")
+#     print("Is File Closed:", f.closed)
+# print("Is File Closed:", f.closed)
