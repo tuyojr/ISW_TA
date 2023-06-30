@@ -7,3 +7,4 @@ python/test.py
 .vscode/
 java/*.java
 *.txt
+*.csv
