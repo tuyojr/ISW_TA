@@ -1822,3 +1822,16 @@ factorial of every number.
 #     print("Data after modification:")
 #     print(text) # Python language is excellent\nBritania Biscuit
 # print("Is file closed?", f.closed) # True
+
+# checking for the existence of a file
+import os, sys
+fname = input("Enter a file name: ")
+if os.path.isfile(fname):
+    print("File exists:", fname)
+    f = open(fname, "r")
+else:
+    print("File does not exist:", fname)
+    sys.exit(0)
+print("The content of the file is:")
+data = f.read()
+print(data)
