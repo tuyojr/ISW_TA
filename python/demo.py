@@ -1804,3 +1804,21 @@ factorial of every number.
 #     print(f.read(3))
 #     print(f.tell()) # position 5
 # print("Is file closed?", f.closed)
+
+# # seek has two arguments seek(offset, fromwhere)
+# # offset ---> is where you want to get to from start
+# data = "Python language is excellent\n"
+# f = open("abc.txt", "w")
+# f.write(data)
+# with open("abc.txt", "r+") as f:
+#     text = f.read()
+#     print(text) # Python language is excellent
+#     print("The current cursor position:", f.tell()) # 30
+#     f.seek(30)
+#     print("The current cursor position:", f.tell()) # 30
+#     f.write("Britania Biscuit")
+#     f.seek(0) # start from begining of line
+#     text = f.read()
+#     print("Data after modification:")
+#     print(text) # Python language is excellent\nBritania Biscuit
+# print("Is file closed?", f.closed) # True
