@@ -1417,7 +1417,7 @@ factorial of every number.
 # # expected output: ""
 # def first_and_las_two(word):
 #     if len(word) < 2:
-#         return ''
+#         return 'this returns an empty string.'
 #     return word[0:2] + word[-2:]
 # s = input("Enter a string: ")
 # print(first_and_las_two(s))
