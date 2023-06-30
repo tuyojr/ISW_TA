@@ -1651,3 +1651,46 @@ factorial of every number.
 #     print("except block")
 # finally:
 #     print('finally block')
+
+# # nested try-except-finally blocks
+# try:
+#     print("outer try block")  # prints
+#     print(10/0)
+#     try:
+#         print("Inner try block")
+#     except ZeroDivisionError:
+#         print("Inner except block")
+#     finally:
+#         print("Inner finally block")
+# except:
+#     print("Outer Except block") # prints
+# finally:
+#     print("outer finally block") # prints
+
+# try:
+#     print("outer try block") # prints
+#     try:
+#         print("Inner try block") # prints
+#         print(10/0)
+#     except ZeroDivisionError:
+#         print("Inner except block")  # prints
+#     finally:
+#         print("Inner finally block") # prints
+# except:
+#     print("Outer Except block")
+# finally:
+#     print("outer finally block") # prints
+
+# try:
+#     print("outer try block") # prints
+#     try:
+#         print("Inner try block") # prints
+#         print(10/0)
+#     except NameError:
+#         print("Inner except block")
+#     finally:
+#         print("Inner finally block") # prints
+# except:
+#     print("Outer Except block") # prints
+# finally:
+#     print("outer finally block") # prints
