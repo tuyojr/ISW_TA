@@ -1595,3 +1595,34 @@ factorial of every number.
 # n_list = list(u_set) # convert set back to list
 # print(n_list)
 # print(type(n_list))
+
+# # Error Handling with try and except
+# try:
+#     print(10/0)
+# except ZeroDivisionError as z:
+#     print("Exception information:", z)
+
+# try:
+#     x = int(input("Enter First Number: "))
+#     y = int(input("Enter Second Number: "))
+#     print(x / y)
+# except ZeroDivisionError:
+#     print("Can't Divide with Zero")
+# except ValueError:
+#     print("Please provide integer value only.")
+
+# try:
+#     x = int(input("Enter First Number: "))
+#     y = int(input("Enter Second Number: "))
+#     print(x/y)
+# except (ZeroDivisionError, ValueError) as e:
+#     print("Please Provide valid numbers only and problem is:", e)
+
+# try:
+#     x = int(input("Enter First Number: "))
+#     y = int(input("Enter Second Number: "))
+#     print(x/y)
+# except ZeroDivisionError:
+#     print("ZeroDivisionError: Can't divide with zero")
+# except:
+#     print("Default Except: Please provide valid input only.")
