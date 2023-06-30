@@ -1573,3 +1573,25 @@ factorial of every number.
 # y = {30, 40, 50, 60}
 # print(x.symmetric_difference(y))
 # print(x^y)
+
+# # set comprehension
+# s = {x * x for x in range(5)}
+# print(s)
+
+# # removing duplicate elements from a list in python
+# l = [10, 20, 30, 10, 20, 40]
+# s = set(l)
+# print(s)
+
+# # frozen set -----> is an immutable set.
+# # all sets are not meant to be frozen sets.
+# vowels = ('a', 'e', 'i', 'o', 'u')
+# f_set = frozenset(vowels)
+# print(f_set)
+# print(type(f_set))
+# u_set = set(f_set) # convert frozen set back to a normal set
+# print(u_set)
+# print(type(u_set))
+# n_list = list(u_set) # convert set back to list
+# print(n_list)
+# print(type(n_list))
