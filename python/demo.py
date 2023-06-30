@@ -1389,7 +1389,8 @@ factorial of every number.
 #     for char in str:
 #         count += 1
 #     return count
-# print(string_length('hello world'))
+# s = input("Enter a string: ")
+# print(string_length(s))
 
 # # 2. Write a python program to count the number of characters (character frequency) in a string.
 # # sample string: google.com
@@ -1403,7 +1404,8 @@ factorial of every number.
 #         else:
 #             dict[n] = 1
 #     return dict
-# print(char_frequency('google.com'))
+# s = input("Enter a string: ")
+# print(char_frequency(s))
 
 # # 3. Write a python program to get a string made of the first 2 and the last 2 chars from a given string.
 # # if the string length is less than 2, retrn the empty string instead.
@@ -1417,4 +1419,5 @@ factorial of every number.
 #     if len(word) < 2:
 #         return ''
 #     return word[0:2] + word[-2:]
-# print(first_and_las_two('w3resource'))
+# s = input("Enter a string: ")
+# print(first_and_las_two(s))
