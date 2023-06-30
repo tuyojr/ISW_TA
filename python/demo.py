@@ -1722,3 +1722,65 @@ factorial of every number.
 #         raise ValueError(x)
 # except ValueError as e:
 #     print(f"You have provided {e}. Please run the program again and enter a positive integer.")
+
+# # file handling
+# # syntax
+# # f = open(filename, mode)
+# # f.close()
+# f = open('demo.txt', 'w')
+# print("File Name:", f.name)
+# print("File Mode:", f.mode)
+# print("Is File Readable:", f.readable())
+# print("Is File Writable:", f.writable())
+# print("Is File CLosed:", f.closed)
+# f.close()
+# print("Is File CLosed:", f.closed)
+
+# # writing data to a file
+# f = open('demo.txt', 'w')
+# f.write("Welcome to python programming.\n")
+# f.write("I hope you're having a good time.\n")
+# print("Data written successfully to file.")
+# f.close()
+
+# # writelines(argument) method
+# f = open("demo.txt", "w")
+# lists = ["Ramesh\n", "Arjun\n", "Senthni\n", "Vignesh"]
+# f.writelines(lists)
+# print("Execute Successfully!")
+# f.close()
+
+# # reading data from a file
+# f = open("poem.txt", "w")
+# f.write("Hello everyone!!\nThis Topic is very important\nPlease don't sleep\nOnce this topic is done\nThen happily you can go to sleep\nThanks for cooperating.")
+# print("Executed Successfully!")
+# f.close
+
+# # read() outputs every data in the file
+# f = open("poem.txt", "r")
+# data = f.read()
+# print(data)
+# f.close()
+
+# # read(n) outputs n number of characters
+# f = open("poem.txt", "r")
+# data = f.read(20)
+# print(data)
+# f.close()
+
+# # readline() reads one line in the file
+# f = open("poem.txt", "r")
+# line1 = f.readline()
+# print(line1, end='')
+# line2 = f.readline()
+# print(line2, end='')
+# line3 = f.readline()
+# print(line3, end='')
+# f.close()
+
+# # readlines() reads every line in the file and prints on a newline
+# f = open("poem.txt", "r")
+# lines = f.readlines()
+# for line in lines:
+#     print(line, end='')
+# f.close()
