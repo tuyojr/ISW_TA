@@ -1448,3 +1448,34 @@ factorial of every number.
 
 # s, t = input("Enter a string 1: "), input("Enter a string 2: ")
 # print(swap_strings(s, t))
+
+# # Sets ---> used to store unique elements.
+# # insertion order is not preserved. they are stored with hashing.
+# # indexing and slicing is not allowed.
+# # sets can store the same and different types of elements or objects.
+# # set objects are mutable because we can add elements to it.
+# # set elements are imutable.
+# # sets operates both on value and type
+# # set() function is a conversion function to convert from list or tuple to set
+# # set can be used to store a relation that can be used to compare other sets
+# # they are required mainly in some statistical operations
+
+# # creating sets
+# s = {10, 20, 30, 40, 40}
+# print(s)
+# print(type(s))
+
+# # set with different elements
+# s1 = {10, '20', 'Rahul', 234.56, True}
+# print(s1)
+# print(type(s1))
+
+# # creating a set using range function
+# s3 = set(range(5))
+# s2 = set([1,"1",1.0,2,2,2,3,3,3])
+# print(s2)
+
+# # to create an empty set, you need to use the set() function
+# s = set()
+# print(s)
+# print(type(s))
