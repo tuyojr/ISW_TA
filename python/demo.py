@@ -1694,3 +1694,23 @@ factorial of every number.
 #     print("Outer Except block") # prints
 # finally:
 #     print("outer finally block") # prints
+
+# # else block
+# try:
+#     print("try block")
+# except:
+#     print("except: Handling code")
+# else:
+#     print("else block")
+# finally:
+#     print("finally block")
+
+# try:
+#     print("try block")
+#     print(10/0)
+# except:
+#     print("except: Handling code")
+# else:
+#     print("else block")
+# finally:
+#     print("finally block")
