@@ -1421,3 +1421,30 @@ factorial of every number.
 #     return word[0:2] + word[-2:]
 # s = input("Enter a string: ")
 # print(first_and_las_two(s))
+
+# # Write a python program to get a string from a given string where all occurences of its first char
+# # have been changed to '$', except the first char itself
+# # sample string: "restart"
+# # expected result: 'resta$t'
+# def char_change(word):
+#     char1 = word[0]
+#     swapped = ""
+#     for char in word[1:]:
+#         if char == char1:
+#             swapped += "$"
+#         else:
+#             swapped += char
+#     return char1 + swapped
+
+# s = input("Enter a string: ")
+# print(char_change(s))
+
+# # write a python program to get a single string from two given strings, separated by a space and swap
+# # the first two characters of each string
+# # sample string: "abc", "xyz"
+# # expected result: "xyc abz"
+# def swap_strings(str1, str2):
+#     return str2[:2] + str1[2:] + " " + str1[:2] + str2[2:]
+
+# s, t = input("Enter a string 1: "), input("Enter a string 2: ")
+# print(swap_strings(s, t))
