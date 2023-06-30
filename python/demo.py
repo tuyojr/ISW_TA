@@ -1626,3 +1626,28 @@ factorial of every number.
 #     print("ZeroDivisionError: Can't divide with zero")
 # except:
 #     print("Default Except: Please provide valid input only.")
+
+# # finally block executes always
+# try:
+#     print("try block")
+# # except only executes if there's an exception in the try block
+# except:
+#     print("except block")
+# finally:
+#     print("finally block")
+
+# try:
+#     print('try block')
+#     print(10/0)
+# except ZeroDivisionError:
+#     print("except block")
+# finally:
+#     print('finally block')
+
+# try:
+#     print('try block')
+#     print(10/0)
+# except NameError: # this is handled by the Python Virtual Machine.
+#     print("except block")
+# finally:
+#     print('finally block')
