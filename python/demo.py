@@ -1479,3 +1479,97 @@ factorial of every number.
 # s = set()
 # print(s)
 # print(type(s))
+
+# # Important methods of sets
+# # add(x) method to add elements in a set
+# s = {10, 20, 30}
+# s.add(40)
+# print(s)
+
+# # update(x, y) to add multiple elements to a set. Arguments are not individual elements
+# # but iterable like range, list, etc.
+# s = {10, 20, 30}
+# l = [40, 50, 60, 10]
+# s.update(l)
+# print(s)
+
+# s = {10, 20, 30}
+# l = [40, 50, 60, 10]
+# s.update(l, range(5))
+# print(s)
+
+# # copy() method
+# s = {10, 20, 30}
+# s1 = s.copy()
+# print(s1)
+
+# # pop() method removes and returns some randoom element from the set
+# s = {40, 10, 30, 20}
+# print(s)
+# print(s.pop())
+# print(s)
+
+# # remove(x) method removes specific elements from the set. KeyError is returned
+# # if the element is not in the set.
+# s = {40, 10, 30, 20}
+# s.remove(30)
+# print(s)
+
+# # s = {40, 10, 30, 20}
+# # s.remove(50)
+# # print(s) # KeyError
+
+# discard(x) removes the specified element from the set but no error will be returned
+# s = {40, 10, 30, 20}
+# s.discard(30)
+# print(s)
+
+# # s = {40, 10, 30, 20}
+# # s.discard(50)
+# # print(s)
+
+# # clear() method removes all elements from the set
+# s = {10, 20, 30}
+# print(s)
+# s.clear()
+# print(s)
+# # del s
+# # print(s) # NameError
+
+# # union() or a|b returns all elements present in both sets
+# x = {10, 20, 30, 40}
+# y = {30, 40, 50, 60}
+# print(x.union(y))
+# print(x|y)
+
+# # intersection() or a&b returns common elements in both
+# x = {10, 20, 30, 40}
+# y = {30, 40, 50, 60}
+# print(x.intersection(y))
+# print(x&y)
+
+# x = {10, 20, 30, 40, "bit-wise"}
+# y = {30, 40, 50, 60, "bit-wise"}
+# print(x.intersection(y))
+# print(x&y)
+
+# bitwise operation
+# a = 10
+# b = 12
+# c = a&b
+# d = a|b
+# print(c) # 8
+# print(d) # 14
+
+# # difference() or a-b method returns elements present in x and not in y
+# x = {10, 20, 30, 40}
+# y = {30, 40, 50, 60}
+# print(x.difference(y))
+# print(x-y)
+# print(y-x)
+
+# # symmetric_difference() or a^b returns elements present in either x or y but not in both.
+# x = {10, 20, 30, 40}
+# y = {30, 40, 50, 60}
+# print(x.symmetric_difference(y))
+# print(x^y)
