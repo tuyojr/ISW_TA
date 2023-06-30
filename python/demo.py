@@ -1381,3 +1381,40 @@ factorial of every number.
 # for l in letter:
 #     d[l] = word.count(l)
 # print(d)
+
+# # Class Activity
+# # 1. Write a python program to calculate the length of a string
+# def string_length(str):
+#     count = 0
+#     for char in str:
+#         count += 1
+#     return count
+# print(string_length('hello world'))
+
+# # 2. Write a python program to count the number of characters (character frequency) in a string.
+# # sample string: google.com
+# # expected result: {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+# def char_frequency(str):
+#     dict = {}
+#     for n in str:
+#         keys = dict.keys()
+#         if n in keys:
+#             dict[n] += 1
+#         else:
+#             dict[n] = 1
+#     return dict
+# print(char_frequency('google.com'))
+
+# # 3. Write a python program to get a string made of the first 2 and the last 2 chars from a given string.
+# # if the string length is less than 2, retrn the empty string instead.
+# # Sample string: 'w3resource'
+# # expected result: 'w3ce
+# # sample string: "w3"
+# # expected output: "w3w3"
+# # sample string: "w"
+# # expected output: ""
+# def first_and_las_two(word):
+#     if len(word) < 2:
+#         return ''
+#     return word[0:2] + word[-2:]
+# print(first_and_las_two('w3resource'))
