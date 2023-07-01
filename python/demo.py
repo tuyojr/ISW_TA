@@ -780,7 +780,7 @@ factorial of every number.
 
 # # insert() ---> takes two arguments 1. index || 2. element
 # """
-# 1. if the specified index is greater than the max index, then the element 
+# 1. if the specified index is greater than the max index, then the element
 # will be inserted at the last position
 # 2. if the specified index is smaller than the min index, then the element
 # will be inserter at the first position
@@ -911,8 +911,8 @@ factorial of every number.
 
 # # comparison operators
 # # for int
-# # first, the type of values are checked, 
-# # second the elements are counted, 
+# # first, the type of values are checked,
+# # second the elements are counted,
 # # third one-by-one, the elements are checked
 # print([1, 2, 3] < [2, 2, 3]) # True
 # print([1, 2, 3] < [1, 2, 3]) # False
@@ -922,7 +922,7 @@ factorial of every number.
 # print([1, 2, 3] == [1, 2, 3]) # True
 
 # # for strings
-# # case sensitive comparison 
+# # case sensitive comparison
 # # +ve LHS is behind RHS
 # # -ve LHS is ahead of RHS
 # # 0 LHS = RHS
@@ -959,7 +959,7 @@ factorial of every number.
 #     for j in i:
 #         print(j, end=" ")
 
-# # lambda functions ---> they take two arguments LHS has what is returned, 
+# # lambda functions ---> they take two arguments LHS has what is returned,
 # # RHS is the operation performed
 # # it is a single line definition of a function
 # #  it is applied in 3 methods which work with a list. (filter, map, reduce)
