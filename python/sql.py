@@ -37,7 +37,7 @@
 # # insert values into a table
 # import pyodbc
 
-# conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+# conn = pyodbc.connect('DRIVER=server_driver;SERVER=server_name;DATABASE=Training;Trusted_Connection=yes')
 
 # cursor = conn.cursor()
 
@@ -45,6 +45,24 @@
 # name = input("Enter Name: ")
 
 # cursor.execute('INSERT INTO Training.dbo.S VALUES (?, ?)', (id, name))
+
+# cursor.commit() # this line is required to commit the changes to the database
+
+# cursor.close()
+
+# conn.close()
+
+# # updating values in a table
+# import pyodbc
+
+# conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+
+# cursor = conn.cursor()
+
+# id = input("Enter ID for UPDATE: ")
+# name = input("Enter Name: ")
+
+# cursor.execute('UPDATE Training.dbo.S SET users_name=? WHERE id=?', (name, id))
 
 # cursor.commit() # this line is required to commit the changes to the database
 
