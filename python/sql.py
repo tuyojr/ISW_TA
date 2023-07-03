@@ -69,3 +69,21 @@
 # cursor.close()
 
 # conn.close()
+
+# # deleting a record
+
+# import pyodbc
+
+# conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+
+# cursor = conn.cursor()
+
+# id = input("Enter ID to DELETE: ")
+
+# cursor.execute('DELETE FROM Training.dbo.S WHERE id=?', (id))
+
+# cursor.commit() # this line is required to commit the changes to the database
+
+# cursor.close()
+
+# conn.close()
