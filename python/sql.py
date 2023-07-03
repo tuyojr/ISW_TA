@@ -110,3 +110,32 @@
 #         cursor.close()
 #     if conn:
 #         conn.close()
+
+# import pyodbc
+
+# try:
+#     conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+
+#     cursor = conn.cursor()
+
+#     sql = "INSERT INTO Training.dbo.employees (emp_no, emp_name, emp_salary, emp_address) VALUES (?, ?, ?, ?)"
+#     records = [(1, 'Sherlock', 25370, '221B Baker St'), 
+#                (2, 'Moriarty', 12671, '34A Bohemian Boulevard'), 
+#                (3, 'Bond', 55783, '007 London Tower'), 
+#                (4, 'Blofeld', 34274, '101A Main St'), 
+#                (5, 'Jack', 22489, '112 Ney York Ave')]
+#     cursor.executemany(sql, records)
+#     cursor.commit()
+
+#     print("Record inserted successfully.")
+
+#     conn.commit()
+# except pyodbc.Error as e:
+#     if conn:
+#         conn.rollback()
+#         print(e)
+# finally:
+#     if cursor:
+#         cursor.close()
+#     if conn:
+#         conn.close()
