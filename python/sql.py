@@ -55,7 +55,7 @@
 # # updating values in a table
 # import pyodbc
 
-# conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+# conn = pyodbc.connect('DRIVER=server_driver;SERVER=server_name;DATABASE=Training;Trusted_Connection=yes')
 
 # cursor = conn.cursor()
 
@@ -74,7 +74,7 @@
 
 # import pyodbc
 
-# conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+# conn = pyodbc.connect('DRIVER=server_driver;SERVER=server_name;DATABASE=Training;Trusted_Connection=yes')
 
 # cursor = conn.cursor()
 
@@ -87,3 +87,26 @@
 # cursor.close()
 
 # conn.close()
+
+# # creating databases and tables with appropriate error handling
+# import pyodbc
+
+# try:
+#     conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+
+#     cursor = conn.cursor()
+
+#     cursor.execute('CREATE TABLE Training.dbo.employees (emp_no INT PRIMARY KEY, emp_name VARCHAR(50) NOT NULL, emp_salary DECIMAL(10,2) CHECK(emp_salary > 0), emp_address VARCHAR(100))')
+
+#     print("Table created successfully.")
+
+#     conn.commit()
+# except pyodbc.Error as e:
+#     if conn:
+#         conn.rollback()
+#         print(e)
+# finally:
+#     if cursor:
+#         cursor.close()
+#     if conn:
+#         conn.close()
