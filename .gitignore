@@ -4,6 +4,7 @@ python/__*/
 python/.**/
 ..
 python/test.py
+python/store.py
 .vscode/
 java/*.java
 *.txt
