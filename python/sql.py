@@ -92,7 +92,7 @@
 # import pyodbc
 
 # try:
-#     conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+#     conn = pyodbc.connect('DRIVER=server_driver;SERVER=server_name;DATABASE=Training;Trusted_Connection=yes')
 
 #     cursor = conn.cursor()
 
@@ -114,7 +114,7 @@
 # import pyodbc
 
 # try:
-#     conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+#     conn = pyodbc.connect('DRIVER=server_driver;SERVER=server_name;DATABASE=Training;Trusted_Connection=yes')
 
 #     cursor = conn.cursor()
 
@@ -130,6 +130,41 @@
 #     print("Record inserted successfully.")
 
 #     conn.commit()
+# except pyodbc.Error as e:
+#     if conn:
+#         conn.rollback()
+#         print(e)
+# finally:
+#     if cursor:
+#         cursor.close()
+#     if conn:
+#         conn.close()
+
+# # prompting user input to input the data into the DB
+# import pyodbc
+
+# try:
+#     conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+
+#     cursor = conn.cursor()
+
+#     while True:
+#         emp_no = int(input("Enter Employee Number: "))
+#         emp_name = input("Enter Employee Name: ")
+#         emp_salary = float(input("Enter Employee Salary: "))
+#         emp_address = input("Enter Employee Address: ")
+
+#         sql = "INSERT INTO Training.dbo.employees (emp_no, emp_name, emp_salary, emp_address) VALUES (?, ?, ?, ?)"
+#         cursor.execute(sql, (emp_no, emp_name, emp_salary, emp_address))
+
+#         print("Record inserted successfully.")
+
+#         choice = input("Do you want to insert another record? (Y/N): ")
+#         if choice == 'N' or choice == 'n':
+#             conn.commit()
+#             print("Successfully input all records.")
+#             break
+    
 # except pyodbc.Error as e:
 #     if conn:
 #         conn.rollback()
