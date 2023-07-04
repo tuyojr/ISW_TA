@@ -300,3 +300,15 @@
 # c.set_id(1)
 # print(c.get_name())
 # print(c.get_id())
+
+# # class methods are methods that are declared inside a class and can be accessed using the class name.
+# # they act on class variables rather than instance variables.
+# # they must be declared using a decorator called @classmethod.
+# # they must be declared with a parameter called cls as the first parameter.
+# # they are rarely used in python
+# class Pizza:
+#     radius = 200 # class variable
+#     @classmethod
+#     def get_radius(cls):
+#         return cls.radius
+# print(Pizza.get_radius())
