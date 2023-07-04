@@ -327,3 +327,18 @@
 #         print(x * y)
 # Demo.sum(10, 20)
 # Demo.product(10, 20)
+
+# # Nested classes
+# # they are classes defined inside another class.
+# class Outer:
+#     def __init__(self):
+#         print('Outer class object creation.')
+#     class Inner:
+#         def __init__(self):
+#             print('Inner class object creation.')
+#         def method(self):
+#             print("Inner class method.")
+
+# a = Outer() # object of outer class prints the __init__ method of the outer class
+# b = Outer().Inner() # object of inner class prints the __init__ method of the outer and inner class
+# b.method() # prints the method of the inner class
