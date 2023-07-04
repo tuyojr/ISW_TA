@@ -312,3 +312,18 @@
 #     def get_radius(cls):
 #         return cls.radius
 # print(Pizza.get_radius())
+
+# # static methods are methods that are declared inside a class and can be accessed using the class name.
+# # they cannot access the class variables and instance variables.
+# # it is a general utility method. No need to use self or cls.
+# # we can declare it using the decorator @staticmethod.
+# # we can access it by using the class name or the object name.
+# class Demo:
+#     @staticmethod
+#     def sum(x, y):
+#         print(x + y)
+#     @staticmethod
+#     def product(x, y):
+#         print(x * y)
+# Demo.sum(10, 20)
+# Demo.product(10, 20)
