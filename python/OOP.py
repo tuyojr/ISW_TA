@@ -244,3 +244,12 @@
 #     time.sleep(2)
 #     print(math.factorial(num))
 # factorial_func(10)
+
+# # a local variable is a varible that is declared and used inside a method.
+# # a local variable cannot be accessed outside the method.
+# class Demo:
+#     def m1(self):
+#         a = 10 # local variable
+#         print(a)
+# d = Demo()
+# d.m1()
