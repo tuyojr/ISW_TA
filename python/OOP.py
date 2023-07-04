@@ -281,3 +281,22 @@
 # c.set_id(1)
 # print(c.name)
 # print(c.id)
+
+# # getter methods can be used to get the values of the instance variables of a class.
+# # they return the values of the instance variables. they are known as accessor methods.
+# class Customer:
+#     def set_name(self, name):
+#         self.name = name
+#     def set_id(self, id):
+#         self.id = id
+    
+#     # getter methods
+#     def get_name(self):
+#         return self.name
+#     def get_id(self):
+#         return self.id
+# c = Customer()
+# c.set_name("Elfo")
+# c.set_id(1)
+# print(c.get_name())
+# print(c.get_id())
