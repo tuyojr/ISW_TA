@@ -342,3 +342,17 @@
 # a = Outer() # object of outer class prints the __init__ method of the outer class
 # b = Outer().Inner() # object of inner class prints the __init__ method of the outer and inner class
 # b.method() # prints the method of the inner class
+
+# inheritance is a concept of OOP where we can inherit the properties of one class into another class.
+# the existing class is called the super, base, or parent class
+# the new class is called the derived or child class
+# the derived class inherits the properties (variables, methods, and constructors) of the base class.
+# this allows for code reusability.
+# application development time will be reduced.
+# code redundancy will also be reduced.
+# there are three types of inheritance in python:
+# single, multiple, and multilevel inheritance.
+# single inheritance is a type of inheritance where a derived class inherits the properties of a single base class.
+# multiple inheritance is a type of inheritance where a derived class inherits the properties of 2 or more base classes.
+# multilevel inheritance is a type of inheritance where a derived class inherits the 
+# properties of a base class and the derived class acts as the base class for another class.
