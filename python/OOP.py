@@ -181,7 +181,7 @@
 # d = Demo() # object automatically displays static varibale b
 # # print(Demo.__dict__) # gives the output of class content
 
-# # inside the instance method.
+# # a static varible can be declared inside the instance method.
 # class Pinkman:
 #     def meth(breaking_bad):
 #         Pinkman.breaking_bad = 146370
@@ -190,5 +190,57 @@
 # heisenberg.meth()
 # print(Pinkman.__dict__)
 
-# inside the class method.
-# inside the static method.
+# # a static varible can be declared inside the static method.
+# # A function defined inisde a class is a static method using a decorator called @staticmethod, you don't have
+# # to give self
+# class Demo():
+#     @staticmethod
+#     def m3():
+#         Demo.z =10
+#         return Demo.z
+# print(Demo.m3())
+
+# # a static varible can be declared inside the class method.
+# # A class method uses a decorator @classmethod when creating a class method.
+# # you use cls instead of self
+# class Demo:
+#   @classmethod
+#   def m4(cls):
+#     cls.c = 30
+#     return cls.c
+# print(Demo.m4())
+
+# # A decorator is a function that takes another function and extends 
+# # the behavior of the latter function without explicitly modifying it.
+# # how it works
+# def HelloDecorator(func):
+#     def inner1():
+#         print("Hello, this is before function execution")
+#         func()
+#         print("This is after function execution")
+#     return inner1
+
+# def function_to_be_used():
+#     print("This is inside the function !!")
+
+# function_used = HelloDecorator(function_to_be_used)
+# function_used()
+
+# # decorator function
+# # how it should be done
+# import time
+# import math
+
+# def calculate_time(func):
+#     def inner1(*args, **kwargs):
+#         begin = time.time()
+#         func(*args, **kwargs)
+#         end = time.time()
+#         print("Total time taken in:", func.__name__, end - begin)
+#     return inner1
+
+# @calculate_time
+# def factorial_func(num):
+#     time.sleep(2)
+#     print(math.factorial(num))
+# factorial_func(10)
