@@ -264,3 +264,20 @@
 #         print(self.a)
 # d = Demo("Instance method")
 # d.method()
+
+# # setter and getter methods
+# # setter methods can be used to set the values of the instance variables of a class.
+# # they are also known as mutator methods.
+# # def set_variable(self, variable):
+# #     self.variable = variable
+# class Customer:
+#     # setter methods
+#     def set_name(self, name):
+#         self.name = name
+#     def set_id(self, id):
+#         self.id = id
+# c = Customer()
+# c.set_name("Elfo")
+# c.set_id(1)
+# print(c.name)
+# print(c.id)
