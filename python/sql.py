@@ -144,7 +144,7 @@
 # import pyodbc
 
 # try:
-#     conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+#     conn = pyodbc.connect('DRIVER=server_driver;SERVER=server_name;DATABASE=Training;Trusted_Connection=yes')
 
 #     cursor = conn.cursor()
 
