@@ -253,3 +253,14 @@
 #         print(a)
 # d = Demo()
 # d.m1()
+
+# # different methods are instance methods, class methods and static methods.
+# # instance methods are methods that are declared inside a class and can be accessed using the objects of the class.
+# # you must declare self as a parameter in an instance method.
+# class Demo:
+#     def __init__(self, a):
+#         self.a = a # instance variable
+#     def method(self):
+#         print(self.a)
+# d = Demo("Instance method")
+# d.method()
