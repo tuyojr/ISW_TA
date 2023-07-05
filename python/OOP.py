@@ -418,3 +418,133 @@
 
 # p = Power(2, 3)
 # p.display()
+
+# polymorphism is a concept of OOP where we can perform a single action in different ways.
+# polymorphism is derived from the greek words poly and morphs.
+# poly means many and morphs means forms.
+# magic methods always have double underscores at the start and end of the method name
+# + --> object.__add__(self, other)
+# - --> object.__sub__(self, other)
+# * --> object.__mul__(self, other)
+# / --> object.__div__(self, other)
+# // --> object.__floordiv__(self, other)
+# % --> object.__mod__(self, other)
+# ** --> object.__pow__(self, other)
+# += --> object.__iadd__(self, other)
+# -= --> object.__isub__(self, other)
+# *= --> object.__imul__(self, other)
+# /= --> object.__idiv__(self, other)
+# //= --> object.__ifloordiv__(self, other)
+# %= --> object.__imod__(self, other)
+
+
+# # operator overloading is a type of polymorphism where we can use the same operator to perform different operations.
+# class Book():
+#     def __init__(self, pages):
+#         self.pages = pages
+#     def __add__(self, others):
+#         return self.pages + others.pages
+
+# b1 = Book(100)
+# b2 = Book(200)
+# print(b1 + b2)
+
+# method overloading is a type of polymorphism where we can use the same method name to perform different operations.
+# it is not allowed in python
+# class Demo():
+#     def meth1(self):
+#         print("no-arg method.")
+#     def meth1(self, a):
+#         print("one-arg method.")
+#     def meth1(self, a, b):
+#         print("two-arg method.")
+# d = Demo()
+# # d.meth1() # TypeError: Demo.meth1() missing 2 required positional arguments: 'a' and 'b'
+# # d.meth1(10) # TypeError: Demo.meth1() missing 1 required positional argument: 'b'
+# d.meth1(10, 20)
+
+# # the way around method overloading in python is by assigning default arguments
+# class Demo():
+#     def __init__(self):
+#         print("\nSum 2 or 3 numbers together.\n")
+#     def sum(self, a=None, b=None, c=None):
+#         if a != None and b !=None and c !=None:
+#             print("The sum of 3 Numbers:", a + b + c)
+#         elif a != None and b != None:
+#             print("The sum of 2 numbers:", a + b)
+#         else:
+#             print("Please provide 2 or 3 arguments.")
+# d = Demo()
+# d.sum(10, 20, 30)
+# d.sum(10, 20)
+# d.sum(10)
+
+# constructor overloading is a type of polymorphism where we can use the same constructor name to perform different operations.
+# this is not allowed in python
+# class Demo():
+#     def __init__(self):
+#         print("no-arg method.")
+#     def __init__(self, a):
+#         print("one-arg method.")
+#     def __init__(self, a, b):
+#         print("two-arg method.")
+
+# # d1 = Demo() # TypeError: Demo.__init__() missing 2 required positional arguments: 'a' and 'b'
+# # d1 = Demo(10) TypeError: Demo.__init__() missing 2 required positional arguments: 'b'
+# d1 = Demo(10, 20)
+
+# # the way around method overloading in python is by assigning default arguments
+# class Demo():
+#     def __init__(self, a=None, b=None, c=None):
+#         if a != None and b !=None and c !=None:
+#             print("The sum of 3 Numbers:", a + b + c)
+#         elif a != None and b != None:
+#             print("The sum of 2 numbers:", a + b)
+#         else:
+#             print("Please provide 2 or 3 arguments.")
+# d = Demo(10, 20)
+# d = Demo(10, 20, 30)
+
+# # method overriding involves defining a method that as the same name as the base class method.
+# # it is used to override the base class method.
+# # it is used to provide the specific implementation of the method in the derived class.
+# # it is also known as runtime polymorphism or dynamic polymorphism or late binding.
+# class P:
+#     def properties_status(slef):
+#         print("Money, Land, Gold.")
+#     def to_marry(self):
+#         print("Anushka.")
+
+# class C(P):
+#     def study_status(self):
+#         print("Studies done waiting for job.")
+#     def to_marry(self):
+#         print("Megha.")
+
+# c = C()
+# c.properties_status()
+# c.to_marry() # this overrides the base class method.
+# c.study_status()
+
+# # construcor overriding involves calling the base class constructor inside the derived class constructor, with the super()
+# # function to "override" the derived class constructor.
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+# class Employee(Person):
+#     def __init__(self, name, age, emp_number, emp_salary):
+#         super().__init__(name, age)
+#         self.emp_number = emp_number
+#         self.emp_salary = emp_salary
+#     def display(self):
+#         print("Employee Name:", self.name)
+#         print("Employee age:", self.age)
+#         print("Employee Number:", self.emp_number)
+#         print("Employee Salary:", self.emp_salary, end="\n\n")
+
+# emp_1 = Employee("Surabhi", 16, 87233, 26000)
+# emp_1.display()
+# emp_2 = Employee("Ranjith", 20, 43423, 36000)
+# emp_2.display()
