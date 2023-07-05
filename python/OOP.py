@@ -356,3 +356,45 @@
 # multiple inheritance is a type of inheritance where a derived class inherits the properties of 2 or more base classes.
 # multilevel inheritance is a type of inheritance where a derived class inherits the 
 # properties of a base class and the derived class acts as the base class for another class.
+
+# class One():
+#     def meth1(self):
+#         print("Base class.")
+
+# # single inheritance
+# class Two(One):
+#     def meth2(self):
+#         print("Child class derived from class One.")
+
+# # c = Two()
+# # c.meth1()
+# # c.meth2()
+
+# # multilevel inheritance
+# class Three(Two):
+#     def meth3(self):
+#         print("Grandchild class derived from class Two.")
+
+# # c = Three()
+# # c.meth1()
+# # c.meth2()
+# # c.meth3()
+
+# # multiple inheritance
+# class A:
+#     def a(self):
+#         print("A class ---> Parent 1.")
+
+# class B:
+#     def b(self):
+#         print("B class ---> Parent 2.")
+
+# class Four(A, B): # if the method names are the same in both parent classes, 
+#     # the method in the first parent class that is called in the child class is executed.
+#     def meth4(self):
+#         print("Child class derived from class A and B")
+
+# c = Four()
+# c.a()
+# c.b()
+# c.meth4()
