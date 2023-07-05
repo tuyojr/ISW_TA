@@ -398,3 +398,23 @@
 # c.a()
 # c.b()
 # c.meth4()
+
+# # it is not required to define a default constructor for the derived class if the base class has a default consructor ONLY.
+# # if we have argumented constructors in the base class, then it is the responsibility to pass the respective arguments
+# # explicitly using the base class constructor.
+# class Number():
+#     def __init__(self, num):
+#         self.num = num
+#     def display(self):
+#         print(self.num)
+
+# class Power(Number):
+#     def __init__(self, num, n):
+#         super().__init__(num)
+#         self.n = n
+#     def display(self):
+#         super().display()
+#         print(self.n)
+
+# p = Power(2, 3)
+# p.display()
