@@ -589,3 +589,26 @@ from abc import *
 # s = Access()
 # s.bank_info()
 # s.interest()
+
+# # string magic method
+# class Student:
+#     def __init__(self, name, roll_number):
+#         self.name = name
+#         self.roll_number = roll_number
+
+# s1 = Student("Ram", 10)
+# s2 = Student("Rahim", 12)
+# print(s1) # prints the memory location of the object <__main__.Student object at 0x00000...>
+# print(s2) # prints the memory location of the object <__main__.Student object at 0x00000...>
+
+# class Student:
+#     def __init__(self, name, roll_number):
+#         self.name = name
+#         self.roll_number = roll_number
+#     def __str__(self):
+#         return 'This is a Student object with name {} and roll number {}'.format(self.name, self.roll_number)
+
+# s1 = Student("Ram", 10)
+# s2 = Student("Rahim", 12)
+# print(s1)
+# print(s2)
