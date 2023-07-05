@@ -548,3 +548,44 @@
 # emp_1.display()
 # emp_2 = Employee("Ranjith", 20, 43423, 36000)
 # emp_2.display()
+
+# # an abstract class is a class which contans one or more abstract methods.
+# # an abstract method is a method that is declared but not implemented.
+# # an abstract class cannot be instantiated.
+# # an abstract class can be inherited.
+# # an abstract class can contain both abstract and non-abstract methods.
+# # an abstract method can only be declared inside an abstract class.
+# # an abstract method must be implemented in the derived class.
+# # there are two types of abstract classes in python: implented and unimplemented.
+# # abstract methods are declared using the decorator @abstractmethod.
+# # firs we need to import the abstractmethod from the abc module.
+from abc import *
+
+# class Demo(ABC):
+#     @abstractmethod
+#     def one(self):
+#         pass # this is an unimplemented abstract method
+#     def two(self):
+#         print("Implemented method.") # this is an implemented method
+# d = Demo() # TypeError: Can't instantiate abstract class Demo with abstract method one
+# d.two()
+
+# # the solution to this is to override the absract class.
+# class Bank(ABC): # base class
+#     def bank_info(self):
+#         print("Welcome to the bank.")
+#     @abstractmethod
+#     def interest(self):
+#         pass
+
+# class Access(Bank): # derived class
+#     def balance(self):
+#         print("Balance is N50,000,000.00")
+#     def interest(self):
+#         # implementation of the abstract method
+#         # if the implementation is not done, the object cannot be instantiated.
+#         print("Interest is N353,126,618.87")
+
+# s = Access()
+# s.bank_info()
+# s.interest()
