@@ -245,3 +245,39 @@ import time
 # imgLabel.pack(side=RIGHT)
 
 # mainloop()
+
+# # Tkinter Listbox
+# # A listbox shows a list of options. It won't do anything by default.
+# # You can link a list box to a function.
+# # To add new items, you can use the insert() method.
+
+# window = Tk()
+# window.title("Listbox Window")
+
+# window.geometry('500x300')
+
+# var1 = StringVar()
+# label = Label(window, bg='gray', fg='black', font=('Arial', 12), width=10, textvariable=var1)
+# label.pack()
+
+# def print_selection():
+#     value = listbox_object.get(listbox_object.curselection())
+#     var1.set(value)
+
+# button1 = Button(window, text='print selection', width=15, height=2, command=print_selection)
+# button1.pack()
+
+# var2 = StringVar()
+# var2.set((1, 2, 3, 4))
+# listbox_object = Listbox(window, listvariable=var2)
+
+# list_items = [11, 22, 33, 44]
+
+# for item in list_items:
+#     listbox_object.insert('end', item)
+# listbox_object.insert(1, 'first')
+# listbox_object.insert(2, 'second')
+# listbox_object.delete(2)
+# listbox_object.pack()
+
+# window.mainloop()
