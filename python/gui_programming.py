@@ -188,3 +188,22 @@ from PIL import Image, ImageTk
 # root.wm_title("Image and Label")
 # root.geometry("700x500")
 # root.mainloop()
+
+# Tkinter Scale
+# SCALE CLASS
+# allows you add a scale or a slider to your window. Example is a volume control.
+# It has a minimum and maximum value you can define
+# window = Tk()
+# window.title("Scale Window")
+# window.geometry("500x300")
+
+# label = Label(window, bg='white', fg='black', width=20, text='empty')
+# label.pack()
+
+# def print_selection(v):
+#     label.config(text='you have selected ' + v)
+
+# scale = Scale(window, label='try me', from_=0, to=10, orient=VERTICAL, length=200, showvalue=0, tickinterval=1, resolution=0.01, command=print_selection)
+# scale.pack()
+
+# window.mainloop()
