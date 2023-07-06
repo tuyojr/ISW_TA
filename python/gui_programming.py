@@ -311,3 +311,20 @@ import time
 # error_message = 'Erorr!'
 # Button(text='Click to Open File', command=callback).pack(fill=X)
 # mainloop()
+
+# # Tkinter Canvas
+# root = Tk()
+
+# # create canvas
+# myCanvas = Canvas(root, bg='white', height=300, width=300)
+
+# # draw arcs
+# coord = 10, 10, 100, 100
+# arc = myCanvas.create_arc(coord, start=0, extent=150, fill='gray')
+# arc2 = myCanvas.create_arc(coord, start=150, extent=215, fill='cyan')
+
+# line = myCanvas.create_line(300, 300, 10, 10, fill='red')
+
+# # add window to show
+# myCanvas.pack()
+# root.mainloop()
