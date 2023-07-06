@@ -1,6 +1,6 @@
 from tkinter import *
-import time
 from PIL import Image, ImageTk
+import time
 
 # # this is a GUI module
 # # tkinter is an interface to the Tk GUI toolkit
@@ -231,3 +231,17 @@ from PIL import Image, ImageTk
 # frame2.pack(padx=10,pady=10)
 
 # root.mainloop()
+
+# # Tkinter Frame Photo
+# # this example adds a photo to the frame
+
+# root = Tk()
+# textLabel = Label(root, text="Label", justify=LEFT, padx=10,)
+# textLabel.pack(side=LEFT)
+
+# image = Image.open("C:\\Users\\Adedolapo.Olutuyo\\Documents\\ISW_TA\\python\\shisui.jpg")
+# photo = ImageTk.PhotoImage(image)
+# imgLabel = Label(root, image=photo)
+# imgLabel.pack(side=RIGHT)
+
+# mainloop()
