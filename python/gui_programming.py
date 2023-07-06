@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter.messagebox
 from PIL import Image, ImageTk
 import time
 
@@ -281,3 +282,17 @@ import time
 # listbox_object.pack()
 
 # window.mainloop()
+
+# # Tkinter Messagebox
+# # it is a little popup showing a message. Sometimes it is accompanied by an icon.
+# def buttonClick():
+#     tkinter.messagebox.showinfo('PopUp', 'SIKE!!!')
+#     # tkinter.messagebox.showwarning('title', 'message')
+#     # tkinter.messagebox.showerror('title', 'message')
+
+# root = Tk()
+# root.title('PopUpBox')
+# root.geometry('100x100')
+# root.resizable(True, False)
+# Button(root, text='click me!', command=buttonClick).pack()
+# root.mainloop()
