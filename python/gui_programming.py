@@ -1,5 +1,6 @@
 from tkinter import *
 import time
+from PIL import Image, ImageTk
 
 # # this is a GUI module
 # # tkinter is an interface to the Tk GUI toolkit
@@ -166,4 +167,24 @@ import time
 # root.wm_title("Label Class Window")
 # root.geometry("200x200")
 # root.after(1000, app.update_clock)
+# root.mainloop()
+
+# # IMAGE CLASS
+# class Window(Frame):
+#     def __init__(self, master=None):
+#         Frame.__init__(self, master)
+#         self.master = master
+#         self.pack(fill=BOTH, expand=1)
+
+#         load = Image.open("C:\\Users\\Adedolapo.Olutuyo\\Documents\\ISW_TA\\python\\shisui.jpg")
+#         # load = Image.urlopen("https://github.com/tuyojr/ISW_TA/blob/main/python/shisui.jpg")
+#         render = ImageTk.PhotoImage(load)
+#         img = Label(self, image=render)
+#         img.image = render
+#         img.place(x=0,y=0)
+
+# root = Tk()
+# app = Window(root)
+# root.wm_title("Image and Label")
+# root.geometry("700x500")
 # root.mainloop()
