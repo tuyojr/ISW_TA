@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import filedialog as fd
 import tkinter.messagebox
 from PIL import Image, ImageTk
 import time
@@ -296,3 +297,17 @@ import time
 # root.resizable(True, False)
 # Button(root, text='click me!', command=buttonClick).pack()
 # root.mainloop()
+
+# def callback():
+#     name = fd.askopenfilename()
+    
+#     image = Image.open(name)
+#     resized = image.resize((384, 240))
+#     photo = ImageTk.PhotoImage(resized)
+#     imgLabel = Label(image=photo)
+#     imgLabel.image = photo
+#     imgLabel.pack()
+
+# error_message = 'Erorr!'
+# Button(text='Click to Open File', command=callback).pack(fill=X)
+# mainloop()
