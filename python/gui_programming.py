@@ -207,3 +207,27 @@ from PIL import Image, ImageTk
 # scale.pack()
 
 # window.mainloop()
+
+# # Tkinter Frame
+# # it lets you organize and group widgets
+# # 1. pack() - it organizes widgets in blocks before placing them in the parent widget
+# # 2. grid() - it organizes widgets in a table-like structure in the parent widget
+# def say_hi():
+#     print("hello ~ l")
+
+# root = Tk()
+
+# frame1 = Frame(root)
+# frame2 = Frame(root)
+# root.title("tkinter frame")
+
+# label=Label(frame1, bg="gray", text="Label", justify=LEFT)
+# label.pack(side=LEFT)
+
+# hi_there = Button(frame2, bg="cyan", text="say hi", command=say_hi)
+# hi_there.pack()
+
+# frame1.pack(padx=1,pady=1)
+# frame2.pack(padx=10,pady=10)
+
+# root.mainloop()
