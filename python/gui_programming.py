@@ -77,3 +77,49 @@ from tkinter import *
 # b2.pack()
 
 # root.mainloop()
+
+# class Window(Frame):
+#     def __init__(self, master=None):
+#         Frame.__init__(self, master)
+#         self.master = master
+
+#         menu = Menu(self.master)
+#         self.master.config(menu=menu)
+
+#         fileMenu = Menu(menu)
+#         fileMenu.add_command(label="Item")
+#         fileMenu.add_command(label="Exit", command=self.exitProgram)
+#         menu.add_cascade(label="File", menu=fileMenu)
+
+#         editMenu = Menu(menu)
+#         editMenu.add_command(label="Undo")
+#         editMenu.add_command(label="Redo")
+#         menu.add_cascade(label="Edit", menu=editMenu)
+
+#         databaseMenu = Menu(menu)
+#         databaseMenu.add_command(label="Insert", command=self.insert)
+#         databaseMenu.add_command(label="Update", command=self.update)
+#         databaseMenu.add_command(label="Create", command=self.create)
+#         databaseMenu.add_command(label="Delete", command=self.delete)
+#         menu.add_cascade(label="Database", menu=databaseMenu)
+
+#     def exitProgram(self):
+#         print("Program exited successfully!")
+#         exit()
+
+#     def insert(self):
+#         print("Records inserted to database successfully!")
+#     def update(self):
+#         print("Database record updated successfully!")
+#     def create(self):
+#         print("Table created in database successfully!")
+#     def delete(self):
+#         print("Record deleted from database successfully!")
+
+# root = Tk()
+
+# app = Window(root)
+
+# root.wm_title("Menu Window")
+
+# root.mainloop()
