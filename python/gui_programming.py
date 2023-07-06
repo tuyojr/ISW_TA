@@ -1,4 +1,5 @@
 from tkinter import *
+import time
 
 # # this is a GUI module
 # # tkinter is an interface to the Tk GUI toolkit
@@ -25,6 +26,7 @@ from tkinter import *
 # # wait for an event to occur and process the event as long as the window is not closed
 # root.mainloop()
 
+# BUTTON CLASS
 # class Window(Frame):
 #     def __init__(self, master = None):
 #         Frame.__init__(self, master)
@@ -78,6 +80,8 @@ from tkinter import *
 
 # root.mainloop()
 
+
+# MENU CLASS
 # class Window(Frame):
 #     def __init__(self, master=None):
 #         Frame.__init__(self, master)
@@ -122,4 +126,44 @@ from tkinter import *
 
 # root.wm_title("Menu Window")
 
+# root.mainloop()
+
+
+# LABEL CLASS
+# class Window(Frame):
+#     def __init__(self, master=None):
+#         Frame.__init__(self, master)
+#         self.master = master
+#         self.pack(fill=BOTH, expand=1)
+
+#         text = Label(self, text='Just do it')
+#         text.place(x=7, y=90)
+#         # text.pack()
+
+# root = Tk()
+# app = Window(root)
+# root.wm_title("Label Window")
+# root.geometry("700x600")
+# root.mainloop()
+
+# class App(Frame):
+#     def __init__(self, master=None):
+#         Frame.__init__(self, master)
+#         self.master = master
+
+#         self.label = Label(text="", fg='blue', font=("Helvetica", 18))
+#         self.label.place(x=50, y=80)
+
+#         self.update_clock()
+
+#     def update_clock(self):
+#         now = time.strftime("%H:%M:%S")
+#         self.label.config(text=now)
+#         self.after(1000, self.update_clock)
+
+# root = Tk()
+# app = App(root)
+# root.wm_title("Label Class Window")
+# root.geometry("200x200")
+# root.after(1000, app.update_clock)
 # root.mainloop()
