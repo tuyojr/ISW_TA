@@ -371,3 +371,32 @@ import time
 # entry2.pack()
 
 # window.mainloop()
+
+# # Tkinter Radiobutton
+# # It lets you select from a variety of items. It is similar to a listbox.
+# # It only lets you select just one option.
+# # You can achieve that by adding the same variable as parameter for radiobuttons.
+
+# window = Tk()
+# window.title("Radiobutton Window")
+# window.geometry('500x300')
+
+# var = StringVar()
+# var.set(' ')
+# label = Label(window, bg='white', width=20, text='empty')
+# label.pack()
+
+# def print_selection():
+#     label.config(text='you have selected ' + var.get())
+
+# radio_button1 = Radiobutton(window, text='Option A', variable=var, value='A')
+# radio_button1.pack()
+# radio_button2 = Radiobutton(window, text='Option B', variable=var, value='B')
+# radio_button2.pack()
+# radio_button3 = Radiobutton(window, text='Option C', variable=var, value='C')
+# radio_button3.pack()
+
+# button = Button(window, text='print selection', width=13, height=1, command=print_selection)
+# button.pack()
+
+# window.mainloop()
