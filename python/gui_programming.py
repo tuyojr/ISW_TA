@@ -4,6 +4,8 @@ import tkinter.messagebox
 from PIL import Image, ImageTk
 import time
 import wikipedia
+from gtts import gTTS
+import os
 
 # # this is a GUI module
 # # tkinter is an interface to the Tk GUI toolkit
@@ -442,3 +444,10 @@ import wikipedia
 
 # # printing the result
 # print(result)
+
+# # Tkinter Google Text to Speech (gTTS) Module
+# myTxt = "All the heavens and all the hells are within you!"
+# language = 'en'
+# myobj = gTTS(text=myTxt, lang=language, slow=False)
+# myobj.save("h_and_h.mp3")
+# os.system('mediaplayer h_and_h.mp3')
