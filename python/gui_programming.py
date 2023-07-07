@@ -3,6 +3,7 @@ from tkinter import filedialog as fd
 import tkinter.messagebox
 from PIL import Image, ImageTk
 import time
+import wikipedia
 
 # # this is a GUI module
 # # tkinter is an interface to the Tk GUI toolkit
@@ -431,3 +432,13 @@ import time
 # button.pack()
 
 # window.mainloop()
+
+# # Tkinter Wikipedia Module
+# # The wikipedia module is a multilingual module that lets you search for articles on wikipedia.
+
+# # finding result for a search
+# # sentences = 10 refers to the numbers of line
+# result = wikipedia.summary("Sherlock Holmes", sentences=10)
+
+# # printing the result
+# print(result)
