@@ -496,3 +496,39 @@ import pyttsx3
 
 # # Start the Tkinter event loop 
 # window.mainloop()
+
+# def wiiki():
+#     res= wikipedia.summary(recognize_speech())
+#     text_entry.insert(END, res)
+
+# def recognize_speech():
+#     recognizer = sr.Recognizer()
+#     with sr.Microphone() as source:
+#         audio = recognizer.listen(source)
+#     try:
+#         recognized_text = recognizer.recognize_google(audio)
+#         text_entry.delete(1.0, END) # Clear previous text
+#     except sr.UnknownValueError:
+#         text_entry.delete(1.0, END) # Clear previous text
+#         text_entry.insert(END, "Speech recognition could not understand audio")
+
+#     except sr.RequestError as e:
+#         text_entry.delete(1.0, END) # Clear previous text
+#         text_entry.insert(END, f"Could not request results from Google Speech Recognition service; {e}")
+#     return recognized_text
+
+# # Create the main Tkinter window
+# window = Tk()
+# window.title("Speech To Text To Wiki")
+# window.geometry('400x400')
+
+# # Create a text entry field
+# text_entry = Text(window, height=10, width=50)
+# text_entry.pack()
+
+# # Create a button to start speech recognition
+# recognize_button = Button(window, text="Recognize Speech", command=wiiki)
+# recognize_button.pack()
+
+# # Start the Tkinter event loop
+# window.mainloop()
