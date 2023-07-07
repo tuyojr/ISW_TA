@@ -328,3 +328,46 @@ import time
 # # add window to show
 # myCanvas.pack()
 # root.mainloop()
+
+# # Tkinter Entry
+# # It allows users input text into the desktop software.
+# # It comes with a label and an input field.
+
+# top = Tk()
+
+# label = Label(top, text='Username')
+# label.pack(side=LEFT)
+
+# entry = Entry(top, bd=5)
+# entry.pack(side=RIGHT)
+
+# top.mainloop()
+
+# top = Tk()
+
+# label = Label(top, text='Username')
+# label.pack(side=LEFT)
+
+# var1 = StringVar()
+
+# entry = Entry(top, bd=5, textvariable=var1)
+# entry.pack(side=LEFT)
+
+# def link():
+#     print(var1.get())
+
+# button = Button(top, text='Submit', command=link)
+# button.pack()
+
+# top.mainloop()
+
+# window = Tk()
+# window.title("Entry Window")
+# window.geometry('500x300')
+
+# entry1 = Entry(window, show=None, font=('Arial', 14))
+# entry2 = Entry(window, show='@', font=('Arial', 14))
+# entry1.pack()
+# entry2.pack()
+
+# window.mainloop()
