@@ -8,6 +8,7 @@ from gtts import gTTS
 import os
 import speech_recognition as sr 
 import pyttsx3
+import openai
 
 # # this is a GUI module
 # # tkinter is an interface to the Tk GUI toolkit
@@ -530,5 +531,15 @@ import pyttsx3
 # recognize_button = Button(window, text="Recognize Speech", command=wiiki)
 # recognize_button.pack()
 
-# # Start the Tkinter event loop
 # window.mainloop()
+# # Start the Tkinter event loop
+
+# openai.api_key = "api_key"
+# prompt = "The future is now, no?."
+
+# model = "text-davinci-003"
+
+# response = openai.Completion.create(engine=model, prompt=prompt, max_tokens=50)
+# generated_text = response.choices[0].text
+
+# print(generated_text)
