@@ -6,6 +6,8 @@ import time
 import wikipedia
 from gtts import gTTS
 import os
+import speech_recognition as sr 
+import pyttsx3
 
 # # this is a GUI module
 # # tkinter is an interface to the Tk GUI toolkit
@@ -451,3 +453,46 @@ import os
 # myobj = gTTS(text=myTxt, lang=language, slow=False)
 # myobj.save("h_and_h.mp3")
 # os.system('mediaplayer h_and_h.mp3')
+
+# # combining tkinter, wikipedia, and gTTS
+# window = Tk()
+# window.title("Wikipedia and gTTS")
+# window.geometry('500x300')
+
+# entry = Entry(window, show=None, font=('Arial', 14))
+# entry.pack()
+
+# def search():
+#     result = wikipedia.summary(entry.get(), sentences=2)
+#     language = 'en'
+#     resultObj = gTTS(text=result, lang=language, slow=False)
+#     print("Search Found!")
+#     resultObj.save("result.mp3")
+#     os.system('mediaplayer result.mp3')
+
+# button = Button(window, text='Search', width=13, height=1, command=search)
+# button.pack()
+
+# window.mainloop()
+
+# # pip install speechrecognition
+# # pip install pyaudio
+
+# def recognize_speech():
+#     r = sr.Recognizer() #initialize the recognizer
+#     with sr.Microphone() as source:
+#         audio1 = r.listen(source)
+#         mytext = r.recognize_google(audio1)
+#         mytext = mytext.lower()
+#         print(mytext)
+
+# # Create the main Tkinter window 
+# window = Tk() 
+# window.title("Speech Recognition") 
+
+# # Create a button to start speech recognition 
+# recognize_button = Button(window, text="Recognize Speech", command=recognize_speech) 
+# recognize_button.pack() 
+
+# # Start the Tkinter event loop 
+# window.mainloop()
