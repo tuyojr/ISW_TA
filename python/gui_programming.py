@@ -400,3 +400,34 @@ import time
 # button.pack()
 
 # window.mainloop()
+
+# # Tkinter Checkbox
+# # It lets you select multiple options. They are like on/off switches and there can be multiple of them.
+# # You can achieve that by adding the same variable as parameter for checkboxes.
+# window = Tk()
+# window.title("Checkbox Window")
+# window.geometry('500x300')
+
+# label = Label(window, bg='white', width=20, text='empty')
+# label.pack()
+
+# def print_selection():
+#     if (var1.get() == 1) & (var2.get() == 0):
+#         label.config(text='I love only Python')
+#     elif (var1.get() == 0) & (var2.get() == 1):
+#         label.config(text='I love only C++')
+#     elif (var1.get() == 0) & (var2.get() == 0):
+#         label.config(text='I do not love either')
+#     else:
+#         label.config(text='I love both')
+
+# var1 = IntVar()
+# var2 = IntVar()
+# checkbox1 = Checkbutton(window, text='Python', variable=var1, onvalue=1, offvalue=0)
+# checkbox1.pack()
+# checkbox2 = Checkbutton(window, text='C++', variable=var2, onvalue=1, offvalue=0)
+# checkbox2.pack()
+# button = Button(window, text='print selection', width=13, height=1, command=print_selection)
+# button.pack()
+
+# window.mainloop()
