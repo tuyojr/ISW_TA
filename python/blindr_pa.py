@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter.messagebox
+import pyodbc
 
 class Database_Frame(Frame):
     def __init__(self, master):
