@@ -1,4 +1,5 @@
 python/__*/
+python/*/__*/
 ./.git/
 ./.gitignore
 python/.**/
