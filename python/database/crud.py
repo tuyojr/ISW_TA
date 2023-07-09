@@ -3,7 +3,7 @@ import pyodbc
 class Database:
     records = []
     def __init__(self, name='', mark=0):
-        self.conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=ISW-230524-1335\SQLEXPRESS;DATABASE=Training;Trusted_Connection=yes')
+        self.conn = pyodbc.connect('DRIVER=ODBC Driver 17 for SQL Server;SERVER=server_name;DATABASE=db_name;Trusted_Connection=yes')
         self.cursor = self.conn.cursor()
         self.name = name
         self.course_code = 'CSC419'
