@@ -12,7 +12,7 @@ class Database:
         self.employment = self.employment_status()
 
     def create_table(self):
-        self.cursor.execute('CREATE TABLE Training.dbo.students(student_id INT IDENTITY(1,1) PRIMARY KEY, name VARCHAR(50) NOT NULL, course_code VARCHAR(10), mark INT NOT NULL, grade VARCHAR(1) NOT NULL, employment_status VARCHAR(50))')
+        self.cursor.execute('CREATE TABLE db_name.dbo.students(student_id INT IDENTITY(1,1) PRIMARY KEY, name VARCHAR(50) NOT NULL, course_code VARCHAR(10), mark INT NOT NULL, grade VARCHAR(1) NOT NULL, employment_status VARCHAR(50))')
         self.conn.commit()
         print("Operation performed successfully.")
         
@@ -39,24 +39,24 @@ class Database:
         print("Record will be added!")
 
     def insert_records(self):
-        self.cursor.executemany('INSERT INTO Training.dbo.students(name, course_code, mark, grade, employment_status) VALUES (?, ?, ?, ?, ?)', self.records)
+        self.cursor.executemany('INSERT INTO db_name.dbo.students(name, course_code, mark, grade, employment_status) VALUES (?, ?, ?, ?, ?)', self.records)
         self.conn.commit()
         print("Operation performed successfully.")
 
     def delete_records(self, row_value):
         self.row_value = row_value
-        self.cursor.execute('DELETE FROM Training.dbo.students WHERE (name) = (?)', self.row_value)
+        self.cursor.execute('DELETE FROM db_name.dbo.students WHERE (name) = (?)', self.row_value)
         self.conn.commit()
         print("Operation performed successfully.")
 
     def select_all_record(self):
-        self.cursor.execute('SELECT * FROM Training.dbo.students')
+        self.cursor.execute('SELECT * FROM db_name.dbo.students')
         for row in self.cursor:
             return row
         
     def select_record_by_name(self, row_value):
         self.row_value = row_value
-        self.cursor.execute('SELECT * FROM Training.dbo.students WHERE (name) = (?)', self.row_value)
+        self.cursor.execute('SELECT * FROM db_name.dbo.students WHERE (name) = (?)', self.row_value)
         for row in self.cursor:
             return row
 
