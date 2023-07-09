@@ -7,9 +7,19 @@ class Database_Frame(Frame):
         self.master = master
         self.pack(fill=BOTH, expand=1)
 
+        # Button to send email at bottom left of frame
+        self.send_mail = Button(self, text="Send", command=self.send_email)
+        self.send_mail.place(x=400, y=550)
+
         # Button to exit program at bottom right of frame
         self.exit_button = Button(self, text="Exit", command=self.exit_program)
         self.exit_button.place(x=500, y=550)
+
+    def send_email(self):
+        send = tkinter.messagebox.askyesno("Send", "Are you sure you want to send this email?")
+        if send > 0:
+            return tkinter.messagebox.showinfo("SENT", "Email sent successfully!")
+
 
     def exit_program(self):
         exit()
