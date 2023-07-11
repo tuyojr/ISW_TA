@@ -44,5 +44,16 @@ public class MyFirstJavaProgram{
 //		String lastName = "Uchiha";
 //		System.out.println(firstName + " " + lastName);
 //		System.out.println(firstName.concat(" " + lastName));
+
+//		// Escape characters with backslash \" \\ \'
+//		// \n --> new line
+//		// \r --> carriage return
+//		// \t --> tab
+//		// \b --> backspace
+//		// \f --> form feed
+//		String text = "Sherlock Holmes's \"A Study in Scarlet\" is a detective novel.";
+//		String url = "C:\\Users\\MyName\\Desktop\\MyFile.txt";
+//		System.out.println(text);
+//		System.out.println(url);
 	}
 }
