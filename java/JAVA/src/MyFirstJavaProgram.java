@@ -55,5 +55,24 @@ public class MyFirstJavaProgram{
 //		String url = "C:\\Users\\MyName\\Desktop\\MyFile.txt";
 //		System.out.println(text);
 //		System.out.println(url);
+
+		// Arithmetic operators e.g. +, -, *, /, %, ++, --
+		// ++ increases the value by 1
+		// -- decreases the value by 1
+
+		// Assignment operators e.g. =, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=, >>>=
+		// += adds the value of the variable and the value after the operator and assigns the result to the variable.
+		// -= subtracts the value of the variable and the value after the operator and assigns the result to the variable.
+		// *= multiplies the value of the variable and the value after the operator and assigns the result to the variable.
+		// /= divides the value of the variable and the value after the operator and assigns the result to the variable.
+		// %= divides the value of the variable and the value after the operator and assigns the remainder to the variable.
+		// &= performs a bitwise AND operation.
+		// ^= performs a bitwise exclusive OR operation.
+		// |= performs a bitwise inclusive OR operation.
+		// >>= performs a bitwise right shift operation.
+		// <<= performs a bitwise left shift operation.
+		// >>>= performs a bitwise right shift operation with zero extension.
+
+		// Comparison operators e.g. ==, !=, >, <, >=, <=
 	}
 }
