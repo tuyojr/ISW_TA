@@ -1,4 +1,15 @@
 public class Arrays {
+//    // passing an array to a method
+//    static void min(int[] arr){
+//        int min = arr[0];
+//        for(int i = 1; i < arr.length; i++){
+//            if(min > arr[i]){
+//                min = arr[i];
+//            }
+//        }
+//        System.out.println(min);
+//    }
+
     public static void main(String[] args) {
 //        int[] a = new int[5]; // declare an array of 5 integers
 //        // initialize the array
@@ -18,5 +29,9 @@ public class Arrays {
 //        for(int i : b) {
 //            System.out.println(i);
 //        }
+
+//        // passing array to a method
+//        int[] a = {33, 3, 4, 5};
+//        min(a);
     }
 }
