@@ -53,5 +53,19 @@ public class Looper {
 //        for(;;){
 //            System.out.println("infinitive loop");
 //        }
+
+//        // while loop is used to iterate a part of the program several times
+//        /*
+//        * while(condition){
+//        *  // code to be executed
+//        *  increment/decrement statement
+//        * }
+//         */
+//        int i = 1;
+//        while(i <=10){
+//            System.out.println(i);
+//            i++;
+//        }
+//        System.out.println("Omo, this loop don run finish o!");
     }
 }
