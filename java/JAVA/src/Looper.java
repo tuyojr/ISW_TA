@@ -67,5 +67,10 @@ public class Looper {
 //            i++;
 //        }
 //        System.out.println("Omo, this loop don run finish o!");
+
+//        // infinite while loop
+//        while(true){
+//            System.out.println("infinitive loop");
+        }
     }
 }
