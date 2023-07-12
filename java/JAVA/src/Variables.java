@@ -14,5 +14,9 @@ public class Variables {
 //        String carName = "Volvo";
 //
 //        System.out.println(myText.concat(" " + carName + "."));
+
+//        // declaring multiple variables
+//        int x = 5, y = 6, z = 50;
+//        System.out.println(x + y + z); // 61
     }
 }
