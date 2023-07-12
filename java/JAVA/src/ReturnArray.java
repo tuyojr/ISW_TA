@@ -11,7 +11,7 @@ public class ReturnArray {
         int[] a = get();
         for(int i = 0; i <= a.length; i++){
             System.out.print(i); // 01234
-            System.out.println(a[i]; // 10 22 44 66 Exception
+            System.out.println(a[i]); // 10 22 44 66 Exception
         }
     }
 }
