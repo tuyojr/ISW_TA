@@ -43,5 +43,15 @@ public class Looper {
 //        for(int i: arr){
 //            System.out.println(i);
 //        }
+
+//        // infinitive for loop
+//        /*
+//        * for(;;){
+//        *   // code to be executed
+//        * }
+//        * */
+//        for(;;){
+//            System.out.println("infinitive loop");
+//        }
     }
 }
