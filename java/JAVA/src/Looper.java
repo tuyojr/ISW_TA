@@ -24,13 +24,24 @@ public class Looper {
 //            System.out.println();
 //        }
 
-        // nested for loop III
-        // reverse the order of the nested loop
-        for (int i = 1; i <= 5; i ++) {
-            for (int j = 5; j >= i; j --) {
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
+//        // nested for loop III
+//        // reverse the order of the nested loop
+//        for (int i = 1; i <= 5; i ++) {
+//            for (int j = 5; j >= i; j --) {
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
+
+//        // for each loop is used to traverse array or collection
+//        /*
+//            for(data_type variable : array | collection) {
+//                body of loop
+//            }
+//        */
+//        int[] arr = {12, 23, 44, 56, 78};
+//        for(int i: arr){
+//            System.out.println(i);
+//        }
     }
 }
