@@ -71,6 +71,16 @@ public class Looper {
 //        // infinite while loop
 //        while(true){
 //            System.out.println("infinitive loop");
-        }
+
+//        // do while loop
+//        int i = 1;
+//        do {
+//            if (i == 1) {
+//                i++;
+//                continue;
+//            }
+//            System.out.println(i);
+//            i++;
+//        } while(i <= 10);
     }
 }
