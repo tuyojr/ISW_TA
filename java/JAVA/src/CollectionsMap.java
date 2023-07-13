@@ -1,11 +1,11 @@
 import java.util.*;
 public class CollectionsMap {
     public static void main(String[] args) {
-        Map map = new HashMap();
+        Map<String, String> map = new HashMap<>();
         map.put("10", "Kol");
         map.put("27", "Finn");
         map.put("77", "Ziggy");
-        map.put("4", "Pendagast");
+        map.put("4", "Pendergast");
 
         System.out.println();
         System.out.println("Map Elements");
