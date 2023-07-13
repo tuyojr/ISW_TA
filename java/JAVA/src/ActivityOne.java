@@ -1,5 +1,5 @@
 public class ActivityOne {
-    static double sqr(double a){
+    static int sqr(int a){
         return a * a;
     }
 
