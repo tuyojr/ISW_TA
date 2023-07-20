@@ -96,8 +96,7 @@ public class WalletService {
     }
 
     // Create a customer
-    public String registerCustomer(String name, String phoneNumber, String address)
-            throws Exception {
+    public String registerCustomer(String name, String phoneNumber, String address) throws Exception {
         if(name.isBlank() || phoneNumber.isBlank() || address.isBlank()) {
             throw new Exception("name or phoneNumber or address must be provided");
         }
@@ -117,5 +116,4 @@ public class WalletService {
         }
         return CustomerQuery.updateCustomerBalance(walletID, amount);
     }
-
 }

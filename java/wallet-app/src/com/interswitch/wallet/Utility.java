@@ -19,9 +19,8 @@ public class Utility {
                 .append(timePath).toString()
                 .toUpperCase();
     }
-    public static final String DB_URL
-            = "jdbc:sqlserver://;servername=DESKTOP-T1BUVLE;" +
-            "instanceName=SQLEXPRESS01;databaseName=WalletDB;" +
+    public static final String DB_URL = "jdbc:sqlserver://;servername=ISW-230524-1335;database=WalletDB;"+
+            "instanceName=SQLEXPRESS;" +
             "encrypt=false;integratedSecurity=true;";
 
 }
