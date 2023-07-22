@@ -10,6 +10,11 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         try(Connection connection = DriverManager.getConnection(DB_URL)){
             System.out.println("Bayron Connection Successful!");
+            try {
+                PopulateDB.populateDB();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }catch(SQLException omoENoWorkO) {
             omoENoWorkO.printStackTrace();
         }

@@ -41,6 +41,8 @@ public class User {
         this.date_of_birth = date_of_birth;
     }
 
+    public User() {}
+
     public String getFirst_name() {
         return first_name;
     }
