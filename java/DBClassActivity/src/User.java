@@ -143,8 +143,9 @@ public class User {
         return address_id;
     }
 
-    public void setAddress_id(Integer address_id) {
+    public User setAddress_id(Integer address_id) {
         this.address_id = address_id;
+        return this;
     }
 
     public Integer getContact_id() {

@@ -25,7 +25,7 @@ public class PopulateDB {
                     System.out.print("Enter contact last name: ");
                     String lastName = userLastName.nextLine();
                     Scanner userPhoneNumber = new Scanner(System.in);
-                    System.out.print("Enter contact phone number (last 5 digits): ");
+                    System.out.print("Enter contact phone number (10 digits): ");
                     Integer phoneNumber = Integer.valueOf(userPhoneNumber.nextLine());
                     Scanner userSex = new Scanner(System.in);
                     System.out.print("Enter contact sex (Male/Female): ");
@@ -89,7 +89,7 @@ public class PopulateDB {
                     String refereeCountryName = refereeCountry.nextLine();
                     Scanner refereeZipCode = new Scanner(System.in);
                     System.out.print("Enter referee zip code (5-6 digits): ");
-                    Integer refereeZipCodeNumber = Integer.valueOf(contactZipCode.nextLine());
+                    Integer refereeZipCodeNumber = refereeZipCode.nextInt();
                     refereeAddressDetails.setStreet(refereeStreetName);
                     refereeAddressDetails.setCity(refereeCityName);
                     refereeAddressDetails.setState(refereeStateName);
@@ -104,7 +104,7 @@ public class PopulateDB {
                     System.out.print("Enter referee name: ");
                     String refereeNameName = refereeName.nextLine();
                     Scanner refereePhoneNumber = new Scanner(System.in);
-                    System.out.print("Enter referee phone number (last 5 digits): ");
+                    System.out.print("Enter referee phone number (10 digits): ");
                     Integer refereePhoneNumberNumber = Integer.valueOf(refereePhoneNumber.nextLine());
                     Scanner refereeProfession = new Scanner(System.in);
                     System.out.print("Enter referee profession: ");
@@ -112,13 +112,11 @@ public class PopulateDB {
                     referee.setName(refereeNameName);
                     referee.setPhone_number(refereePhoneNumberNumber);
                     referee.setProfession(refereeProfessionName);
+
                     // get the integer value of the address ID
                     User a_ID = Address.selectAddressID();
-                    if (a_ID != null) {
-                        referee.setAddress_id(a_ID.getAddress_id());
-                    }
-                    String refereeDetails = Referee.createReferee(referee);
-                    System.out.println(refereeDetails);
+                    if (a_ID != null) Referee.createReferee(referee,
+                            referee.setAddress_id(a_ID.getAddress_id()));
 
                     // get contact_id and referee_id and update the contactReferee table
                     User contact_ID = Contact.selectContactID();

@@ -5,7 +5,7 @@ public class Referee {
             "VALUES (?,?,?,?)";
     static final String SELECT_QUERY = "SELECT TOP 1 referee_id FROM Referee ORDER BY referee_id DESC";
 
-    public static String createReferee(User ref) {
+    public static void createReferee(User ref, User refAddress) {
         try(Connection conn = DriverManager
                 .getConnection(Main.DB_URL);
             PreparedStatement stmt = conn.prepareStatement(INSERT_QUERY);
@@ -14,13 +14,12 @@ public class Referee {
             stmt.setString(1, ref.getName());
             stmt.setInt(2, ref.getPhone_number());
             stmt.setString(3, ref.getProfession());
-            stmt.setInt(4, ref.getAddress_id());
+            stmt.setInt(4, refAddress.getAddress_id());
             int result = stmt.executeUpdate();
-            if (result == 1) return "Referee created successfully!";
+            if (result == 1) System.out.println("Referee created successfully!");
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
     }
 
     public static User selectRefereeID() {
