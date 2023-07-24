@@ -11,6 +11,7 @@ public class Main {
             System.out.println("Bayron Connection Successful!");
             try {
                 PopulateDB.populateDB();
+                connection.close();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
