@@ -1,4 +1,4 @@
-package kotoamatsukami.uchiha.shisui.greet;
+package kotoamatsukami.uchiha.shisui.greet.implementation;
 
 public class Greeting {
 
