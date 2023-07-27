@@ -1,10 +1,10 @@
-package com.tuyojr.springbootstarter;
+package start.learn.spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootstarterApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
