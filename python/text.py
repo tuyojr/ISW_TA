@@ -3,6 +3,8 @@ import tkinter.messagebox
 from translate import Translator
 import speech_recognition as sr
 import pyttsx3
+import cv2
+import pytesseract
 
 Screen = Tk()
 Screen.title("Language Translator")
@@ -30,12 +32,12 @@ def text_input_button_click():
     text_input.config(state=NORMAL)
     speech_input_button.config(state=DISABLED)
     # show a messagebox to tell the user to input the text
-    tkinter.messagebox.showinfo("Text Input", "Please input the text")
+    tkinter.messagebox.showinfo("Text Input", "Please input the text.")
 
 def speech_input_button_click():
     text_input_button.config(state=DISABLED)
     speech_input_button.config(state=NORMAL)
-    tkinter.messagebox.showinfo("Speech Input", "Please allow the microphone to record your voice")
+    tkinter.messagebox.showinfo("Speech Input", "Please allow the microphone to record your voice.")
     try:
         with sr.Microphone() as source:
             speech_recognizer.adjust_for_ambient_noise(source, duration=0.2)
@@ -50,8 +52,56 @@ def speech_input_button_click():
     except sr.UnknownValueError:
         print("Unknown error occured")
 
+def image_input_button_click():
+    text_input_button.config(state=DISABLED)
+    speech_input_button.config(state=DISABLED)
+    image_input_button.config(state=NORMAL)
+    tkinter.messagebox.showinfo("Image Input", "Please wait for the camera to come up and scan your text.")
+    # Path to the Tesseract OCR executable (Change this if necessary)
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+    # Initialize the webcam capture
+    cap = cv2.VideoCapture(0)
+
+    while True:
+        # Capture a frame from the webcam
+        ret, frame = cap.read()
+
+        # Preprocess the frame (you can add more preprocessing steps here)
+        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+        # Perform OCR on the preprocessed frame
+        extracted_text = pytesseract.image_to_string(gray_frame)
+
+        # Find bounding boxes for the detected characters
+        boxes = pytesseract.image_to_boxes(gray_frame)
+        for b in boxes.splitlines():
+            b = b.split(' ')
+            char, x, y, w, h = b[0], int(b[1]), int(b[2]), int(b[3]), int(b[4])
+            cv2.rectangle(frame, (x, y), (w, h), ( 255,0, 0), 1)
+            cv2.putText(frame, char, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
+
+        # Display the extracted text
+        # text_input.delete(0, END)
+        text_input.insert(0, extracted_text)
+
+        # Display the original frame with bounding boxes and text
+        cv2.imshow('Webcam', frame)
+
+        # Stop the loop when the user presses 'q'
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    # Release the webcam and close all windows
+    cap.release()
+    cv2.destroyAllWindows()
+
+    
 text_input_button = Button(Screen, text="Text", font="arial 7", bg="white smoke", command=text_input_button_click)
 text_input_button.place(x=100, y=10)
+
+image_input_button = Button(Screen, text="Image", font="arial 7", bg="white smoke", command=image_input_button_click)
+image_input_button.place(x=200, y=10)
 
 speech_input_button = Button(Screen, text="Speak", font="arial 7", bg="white smoke", command=speech_input_button_click)
 speech_input_button.place(x=300, y=10)
@@ -78,6 +128,7 @@ def Translate():
     Translation = translator.translate(TextVar.get())
     OutputVar.set(Translation)
     # reset the buttons after translating
+    image_input_button.config(state=NORMAL)
     text_input.config(state=NORMAL)
     speech_input_button.config(state=NORMAL)
     SpeakText(OutputVar.get())
