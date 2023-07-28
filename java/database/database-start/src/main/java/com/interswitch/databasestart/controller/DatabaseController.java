@@ -30,7 +30,7 @@ public class DatabaseController {
         return new ResponseEntity<>("New customer added successfully!", HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/update-customer", method = RequestMethod.PUT)
+    @RequestMapping(value = "/update-customer/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object> updateExistingCustomer(@PathVariable("id") Long id, @RequestBody DatabaseModel customer){
         dbService.updateExistingCustomer(id, customer);
         return new ResponseEntity<>("Customer details updated successfully.", HttpStatus.OK);

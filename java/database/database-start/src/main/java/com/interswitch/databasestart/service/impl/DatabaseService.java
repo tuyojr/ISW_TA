@@ -40,6 +40,7 @@ public class DatabaseService implements IDatabaseService {
     @Override
     public Optional<DatabaseModel> getOneCustomerByID(Long id) {
         if (id == null) return Optional.empty();
+        // return the details of the customer with the specified id
         return databaseRepository.findById(id);
     }
 

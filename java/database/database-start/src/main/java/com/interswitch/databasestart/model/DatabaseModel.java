@@ -1,8 +1,10 @@
 package com.interswitch.databasestart.model;
 
 import jakarta.persistence.*;
-import lombok.*;
-import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -22,5 +24,5 @@ public class DatabaseModel {
     private Long phoneNumber;
 
     @Column(name = "dateJoined")
-    private LocalDate dateJoined;
+    private String dateJoined;
 }
