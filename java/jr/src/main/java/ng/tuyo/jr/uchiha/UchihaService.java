@@ -1,6 +1,7 @@
 package ng.tuyo.jr.uchiha;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -12,7 +13,8 @@ import java.util.List;
 // it needs to be instantiated so that the controller can use it.
 // the @Component annotation is used to tell spring that the UchihaService class is a
 // dependency of the UchihaController class
-@Component
+//@Component is the parent of @Service, @Repository, @Controller and @RestController
+@Service // makes the class serve as a service layer
 public class UchihaService {
     public List<Uchiha> getUchiha(){ return List.of(
             new Uchiha(

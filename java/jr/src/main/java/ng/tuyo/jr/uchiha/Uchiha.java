@@ -1,8 +1,23 @@
 package ng.tuyo.jr.uchiha;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
+@Entity // makes the class serve as an entity and maps it to a table in the database. It is for hibernate.
+@Table // maps the class to a table in the database.
 public class Uchiha {
+
+    @Id // makes the id field the primary key of the table
+    @SequenceGenerator(
+            name = "uchiha_sequence",
+            sequenceName = "uchiha_sequence",
+            allocationSize = 1
+    ) // a sequence generator is used to generate the id of the table
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "uchiha_sequence"
+    ) // the id is generated automatically
     private Long id;
     private String name;
     private String powerUp;
