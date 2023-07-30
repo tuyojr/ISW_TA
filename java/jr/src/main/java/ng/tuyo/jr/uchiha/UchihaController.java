@@ -1,9 +1,7 @@
 package ng.tuyo.jr.uchiha;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -28,5 +26,23 @@ public class UchihaController {
     @GetMapping // makes the method serve as a GET endpoint which is a restful endpoint
     public List<Uchiha> getUchiha(){
         return uchihaService.getUchiha();
+    }
+
+    @PostMapping
+    public void registerNewUchiha(@RequestBody Uchiha uchiha){
+        uchihaService.addNewUchiha(uchiha);
+    }
+
+    @DeleteMapping(path = "{uchihaId}")
+    public void deleteUchiha(@PathVariable("uchihaId") Long uchihaId){
+        uchihaService.deleteUchiha(uchihaId);
+    }
+
+    @PutMapping(path = "{uchihaId}")
+    public void updateUchiha(
+            @PathVariable("uchihaId") Long uchihaId,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String powerUp){
+        uchihaService.updateUchiha(uchihaId, name, powerUp);
     }
 }

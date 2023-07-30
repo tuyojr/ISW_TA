@@ -3,6 +3,7 @@ package ng.tuyo.jr.uchiha;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 @Entity // makes the class serve as an entity and maps it to a table in the database. It is for hibernate.
 @Table // maps the class to a table in the database.
@@ -22,6 +23,8 @@ public class Uchiha {
     private String name;
     private String powerUp;
     private LocalDate date_of_birth;
+
+    @Transient // makes sure this field doesn't need to be a column in our database. It is calculated for us.
     private Integer age;
 
     public Uchiha() {}
@@ -29,23 +32,19 @@ public class Uchiha {
     public Uchiha(Long id,
                   String name,
                   String powerUp,
-                  LocalDate date_of_birth,
-                  Integer age) {
+                  LocalDate date_of_birth) {
         this.id = id;
         this.name = name;
         this.powerUp = powerUp;
         this.date_of_birth = date_of_birth;
-        this.age = age;
     }
 
     public Uchiha(String name,
                   String powerUp,
-                  LocalDate date_of_birth,
-                  Integer age) {
+                  LocalDate date_of_birth) {
         this.name = name;
         this.powerUp = powerUp;
         this.date_of_birth = date_of_birth;
-        this.age = age;
     }
 
     public Long getId() {
@@ -81,7 +80,7 @@ public class Uchiha {
     }
 
     public Integer getAge() {
-        return age;
+        return Period.between(this.date_of_birth, LocalDate.now()).getYears();
     }
 
     public void setAge(Integer age) {
