@@ -3,7 +3,6 @@ package com.interswitch.databasestart.service.impl;
 import com.interswitch.databasestart.model.DatabaseModel;
 import com.interswitch.databasestart.repository.DatabaseRepository;
 import com.interswitch.databasestart.service.IDatabaseService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -11,16 +10,19 @@ import java.util.Optional;
 
 @Service
 public class DatabaseService implements IDatabaseService {
-    @Autowired
-    DatabaseRepository databaseRepository;
+//    @Autowired
+    private final DatabaseRepository databaseRepository;
+
+    public DatabaseService(DatabaseRepository databaseRepository) {
+        this.databaseRepository = databaseRepository;
+    }
 
     @Override
-    public String addNewCustomer(DatabaseModel customer) {
-        if(customer == null){
-            return "Customer is null, it should not be.";
-        }
-        Long id = databaseRepository.save(customer).getId();
-        return "Customer saved successfully with id: " + id + ".";
+    public DatabaseModel addNewCustomer(DatabaseModel customer) {
+//        if(customer == null){
+//            return null;
+//        }
+        return databaseRepository.save(customer);
     }
 
     @Override

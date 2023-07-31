@@ -6,7 +6,7 @@ import java.util.*;
 
 public interface IDatabaseService {
 
-    String addNewCustomer(DatabaseModel customer);
+    DatabaseModel addNewCustomer(DatabaseModel customer);
     String updateExistingCustomer(Long id, DatabaseModel updatedCustomer);
     Optional<DatabaseModel> getOneCustomerByID(Long id);
     Collection<DatabaseModel> getAllCustomers();
