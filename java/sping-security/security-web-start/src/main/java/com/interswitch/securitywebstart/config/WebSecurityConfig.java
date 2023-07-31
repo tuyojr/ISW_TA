@@ -1,4 +1,4 @@
-package com.interswitch.securitywebfinal.config;
+package com.interswitch.securitywebstart.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

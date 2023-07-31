@@ -10,10 +10,6 @@
         <module name="security-web-start" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="security-web-final" target="17" />
-      <module name="security-web-start" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

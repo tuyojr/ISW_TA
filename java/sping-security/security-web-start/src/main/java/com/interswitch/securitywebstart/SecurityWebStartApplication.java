@@ -9,5 +9,4 @@ public class SecurityWebStartApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SecurityWebStartApplication.class, args);
 	}
-
 }
