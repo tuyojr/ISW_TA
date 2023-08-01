@@ -1,6 +1,6 @@
 package com.interswitch.databasestart.service;
 
-import com.interswitch.databasestart.repository.DatabaseRepository;
+import com.interswitch.databasestart.repository.impl.DatabaseRepositoryJpa;
 import com.interswitch.databasestart.service.impl.DatabaseService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,12 +12,12 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class DatabaseServiceTest {
-    private DatabaseRepository databaseRepository;
+    private DatabaseRepositoryJpa databaseRepository;
     private DatabaseService databaseService;
 
     @BeforeEach
     void setUp(){
-        databaseRepository = mock(DatabaseRepository.class);
+        databaseRepository = mock(DatabaseRepositoryJpa.class);
         databaseService = new DatabaseService(databaseRepository);
     }
 
