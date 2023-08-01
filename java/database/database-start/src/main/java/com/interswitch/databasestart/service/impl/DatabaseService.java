@@ -1,7 +1,7 @@
 package com.interswitch.databasestart.service.impl;
 
 import com.interswitch.databasestart.model.DatabaseModel;
-import com.interswitch.databasestart.repository.impl.DatabaseRepositoryJpa;
+import com.interswitch.databasestart.repository.impl.JpaDatabaseRepository;
 import com.interswitch.databasestart.service.IDatabaseService;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +11,9 @@ import java.util.Optional;
 @Service
 public class DatabaseService implements IDatabaseService {
 //    @Autowired
-    private final DatabaseRepositoryJpa databaseRepository;
+    private final JpaDatabaseRepository databaseRepository;
 
-    public DatabaseService(DatabaseRepositoryJpa databaseRepository) {
+    public DatabaseService(JpaDatabaseRepository databaseRepository) {
         this.databaseRepository = databaseRepository;
     }
 

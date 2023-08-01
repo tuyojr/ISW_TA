@@ -1,0 +1,3 @@
+spring:
+    datasource:
+        url: 'jdbc:sqlserver://;servername=ISW-230524-1335;databaseName=Training;instanceName=SQLEXPRESS;encrypt=false;integratedSecurity=true'
