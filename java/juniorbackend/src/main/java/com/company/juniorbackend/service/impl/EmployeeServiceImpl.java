@@ -25,11 +25,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee updateEmployee(Long employeeId, Employee employee) {
-        // Check if the employee with the given ID exists, then update it
-        // Perform any validation or business logic before saving
         Employee existingEmployee = employeeRepository.findById(employeeId).orElse(null);
         if (existingEmployee != null) {
-            // Update the existing employee with the new data
             existingEmployee.setName(employee.getName());
             existingEmployee.setPhone(employee.getPhone());
             existingEmployee.setAddress(employee.getAddress());
