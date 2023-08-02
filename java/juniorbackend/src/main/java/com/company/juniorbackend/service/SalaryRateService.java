@@ -1,5 +1,6 @@
 package com.company.juniorbackend.service;
 
+import com.company.juniorbackend.model.Employee;
 import com.company.juniorbackend.model.SalaryRate;
 import java.util.*;
 
