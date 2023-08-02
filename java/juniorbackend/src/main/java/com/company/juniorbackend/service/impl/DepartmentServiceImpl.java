@@ -3,9 +3,11 @@ package com.company.juniorbackend.service.impl;
 import com.company.juniorbackend.model.Department;
 import com.company.juniorbackend.repository.DepartmentRepository;
 import com.company.juniorbackend.service.DepartmentService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class DepartmentServiceImpl implements DepartmentService {
     private final DepartmentRepository departmentRepository;
 

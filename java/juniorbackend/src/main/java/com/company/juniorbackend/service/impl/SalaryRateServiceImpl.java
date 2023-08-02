@@ -4,9 +4,11 @@ import com.company.juniorbackend.model.Employee;
 import com.company.juniorbackend.model.SalaryRate;
 import com.company.juniorbackend.repository.SalaryRateRepository;
 import com.company.juniorbackend.service.SalaryRateService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SalaryRateServiceImpl implements SalaryRateService {
     private final SalaryRateRepository salaryRateRepository;
 
