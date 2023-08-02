@@ -45,4 +45,19 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee getEmployeeById(Long employeeId) {
         return employeeRepository.findById(employeeId).orElse(null);
     }
+
+    @Override
+    public List<Employee> getEmployeesBySalaryRate(Long rateId) {
+        return employeeRepository.findBySalaryRateId(rateId);
+    }
+
+    @Override
+    public List<Employee> getEmployeesByDepartment(Long departmentId) {
+        return employeeRepository.findByDepartmentId(departmentId);
+    }
+
+    @Override
+    public List<Employee> getEmployeesManagedByManager(Long managerId) {
+        return employeeRepository.findByManagerId(managerId);
+    }
 }
