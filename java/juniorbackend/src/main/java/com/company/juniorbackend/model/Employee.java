@@ -37,4 +37,7 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "employee_category_id")
     private EmployeeCategory employeeCategory;
+
+    @Transient
+    private Long managerId;
 }
