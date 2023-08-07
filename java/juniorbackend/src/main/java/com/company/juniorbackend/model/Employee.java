@@ -31,11 +31,11 @@ public class Employee {
     private LocalDateTime joinedDate;
 
     @ManyToOne
-    @JoinColumn(name = "department_id")
+    @JoinColumn(name = "id")
     private Department department;
 
     @ManyToOne
-    @JoinColumn(name = "employee_category_id")
+    @JoinColumn(name = "id")
     private EmployeeCategory employeeCategory;
 
     @Transient
