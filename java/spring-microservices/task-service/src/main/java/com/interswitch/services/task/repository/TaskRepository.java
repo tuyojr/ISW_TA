@@ -17,4 +17,8 @@ public class TaskRepository {
                 .filter(a -> a.getAssignedTo().equals(assignedTo))
                 .toList();
     }
+
+    public List<Task> findAll(){
+        return tasks;
+    }
 }

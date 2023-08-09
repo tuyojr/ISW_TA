@@ -27,4 +27,10 @@ public class TaskController {
         LOGGER.info("Task find: assignedTo={}", assignedTo);
         return repository.findTaskByEmployeeId(assignedTo);
     }
+
+    @GetMapping
+    public List<Task> findAll() {
+        LOGGER.info("Task find");
+        return repository.findAll();
+    }
 }

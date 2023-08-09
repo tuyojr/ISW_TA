@@ -38,7 +38,7 @@ spring:
         - Path=/organization/**
         filters:
         - RewritePath=/organization/(?<path>.*), /$\{path}
-        - id: task-service
+      - id: task-service
         uri: lb://task-service
         predicates:
         - Path=/task/**
