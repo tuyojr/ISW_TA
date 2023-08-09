@@ -22,9 +22,9 @@ public class TaskController {
         this.repository = repository;
     }
 
-    @GetMapping("/{id}")
-    public List<Task> findTaskByEmployeeID(@PathVariable("id") Long assignedTo) {
-        LOGGER.info("Task find: id={}", assignedTo);
+    @GetMapping("/{assignedTo}")
+    public List<Task> findTaskByEmployeeID(@PathVariable("assignedTo") Long assignedTo) {
+        LOGGER.info("Task find: assignedTo={}", assignedTo);
         return repository.findTaskByEmployeeId(assignedTo);
     }
 }

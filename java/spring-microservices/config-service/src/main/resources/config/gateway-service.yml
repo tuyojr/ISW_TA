@@ -38,6 +38,12 @@ spring:
         - Path=/organization/**
         filters:
         - RewritePath=/organization/(?<path>.*), /$\{path}
+        - id: task-service
+        uri: lb://task-service
+        predicates:
+        - Path=/task/**
+        filters:
+        - RewritePath=/task/(?<path>.*), /$\{path}
       - id: openapi
         uri: http://localhost:${server.port}
         predicates:
