@@ -12,26 +12,26 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         WalletService service = new WalletService();
-        Product product1 = new Product(1, "Milk", "Peak Milk", 100.00, 100, "2020-01-01", true);
-        Product product2 = new Product(2, "Bread", "Agege Bread", 200.00, 100, "2020-01-01", true);
-        Product product3 = new Product(3, "Egg", "Fresh Eggs", 50.00, 100, "2020-01-01", true);
-        Product product4 = new Product(4, "Biscuit", "Digestive Biscuit", 150.00, 100, "2020-01-01", true);
-        Product product5 = new Product(5, "Sausage", "Chicken Sausage", 250.00, 100, "2020-01-01", true);
-        Product product6 = new Product(6, "Cheese", "Cheddar Cheese", 350.00, 100, "2020-01-01", true);
-        Product product7 = new Product(7, "Butter", "Salted Butter", 450.00, 100, "2020-01-01", true);
-        Product product8 = new Product(8, "Yogurt", "Strawberry Yogurt", 550.00, 100, "2020-01-01", true);
-        Product product9 = new Product(9, "Ice Cream", "Vanilla Ice Cream", 650.00, 100, "2020-01-01", true);
-        Product product10 = new Product(10, "Chocolate", "Dark Chocolate", 750.00, 100, "2020-01-01", true);
-        productList.add(product1);
-        productList.add(product2);
-        productList.add(product3);
-        productList.add(product4);
-        productList.add(product5);
-        productList.add(product6);
-        productList.add(product7);
-        productList.add(product8);
-        productList.add(product9);
-        productList.add(product10);
+//        Product product1 = new Product(1, "Milk", "Peak Milk", 100.00, 100, "2020-01-01", true);
+//        Product product2 = new Product(2, "Bread", "Agege Bread", 200.00, 100, "2020-01-01", true);
+//        Product product3 = new Product(3, "Egg", "Fresh Eggs", 50.00, 100, "2020-01-01", true);
+//        Product product4 = new Product(4, "Biscuit", "Digestive Biscuit", 150.00, 100, "2020-01-01", true);
+//        Product product5 = new Product(5, "Sausage", "Chicken Sausage", 250.00, 100, "2020-01-01", true);
+//        Product product6 = new Product(6, "Cheese", "Cheddar Cheese", 350.00, 100, "2020-01-01", true);
+//        Product product7 = new Product(7, "Butter", "Salted Butter", 450.00, 100, "2020-01-01", true);
+//        Product product8 = new Product(8, "Yogurt", "Strawberry Yogurt", 550.00, 100, "2020-01-01", true);
+//        Product product9 = new Product(9, "Ice Cream", "Vanilla Ice Cream", 650.00, 100, "2020-01-01", true);
+//        Product product10 = new Product(10, "Chocolate", "Dark Chocolate", 750.00, 100, "2020-01-01", true);
+//        productList.add(product1);
+//        productList.add(product2);
+//        productList.add(product3);
+//        productList.add(product4);
+//        productList.add(product5);
+//        productList.add(product6);
+//        productList.add(product7);
+//        productList.add(product8);
+//        productList.add(product9);
+//        productList.add(product10);
 
         // use a while loop to keep prompting the user for input until they exit
         while(true){

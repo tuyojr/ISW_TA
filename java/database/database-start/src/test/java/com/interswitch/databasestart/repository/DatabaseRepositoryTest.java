@@ -2,12 +2,13 @@ package com.interswitch.databasestart.repository;
 
 import com.interswitch.databasestart.model.DatabaseModel;
 import com.interswitch.databasestart.repository.impl.DatabaseRepositoryInMemory;
-import com.interswitch.databasestart.repository.impl.DatabaseRepositoryJpa;
+import com.interswitch.databasestart.repository.impl.JpaDatabaseRepository;
 import com.interswitch.databasestart.service.impl.DatabaseService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Mockito.mock;
@@ -15,14 +16,13 @@ import static org.mockito.Mockito.when;
 
 
 public class DatabaseRepositoryTest {
-    private DatabaseRepositoryJpa databaseRepositoryJpa;
+    private JpaDatabaseRepository databaseRepositoryJpa;
     private DatabaseRepositoryInMemory databaseRepositoryInMemory;
     private DatabaseService databaseService;
 
     @BeforeEach
     public void setUp(){
-        databaseRepositoryJpa = mock(DatabaseRepositoryJpa.class);
-        databaseRepositoryInMemory = new DatabaseRepositoryInMemory(databaseRepositoryJpa);
+        databaseRepositoryJpa = mock(JpaDatabaseRepository.class);
         databaseService = new DatabaseService(databaseRepositoryJpa);
 
     }
