@@ -267,10 +267,10 @@ def main_window():
 splash = Tk()
 splash.title("Intro Animation")
 splash.attributes("-fullscreen", True)
-splash.configure(bg="black")
+splash.configure(bg="#808A87")
 
 # Create a canvas to draw the animation
-canvas = Canvas(splash, bg="black", highlightthickness=0)
+canvas = Canvas(splash, bg="#808A87", highlightthickness=0)
 canvas.pack(fill="both", expand=True)
 
 labels = [
@@ -285,7 +285,7 @@ for label_info in labels:
         label_info["y"],
         text=label_info["text"],
         font=("Arial", 45, "bold"),
-        fill="#47cbed"
+        fill="black"
     )
     animated_labels.append(label)
 
