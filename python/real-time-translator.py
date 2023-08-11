@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter.messagebox
+from tkinter import PhotoImage
 from translate import Translator
 import speech_recognition as sr
 import pygame
@@ -277,6 +278,15 @@ labels = [
     {"text": "Quantum\n", "x": -200, "y": splash.winfo_screenheight() // 2, "speed": 30},
     {"text": "Translator\n", "x": -200, "y": splash.winfo_screenheight() // 2 + 100, "speed": 30},
 ]
+
+# Load the logo image
+logo_image = PhotoImage(file="C:\\Users\\Adedolapo.Olutuyo\\Documents\\ISW_TA\\python\\quantum.png")
+
+logo = canvas.create_image(
+    splash.winfo_screenwidth() // 2,
+    splash.winfo_screenheight() // 4,
+    image=logo_image
+)
 
 animated_labels = []
 for label_info in labels:
