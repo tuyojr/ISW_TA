@@ -50,7 +50,7 @@ public class User {
                 BasicArithmetic basicArithmetic = new BasicArithmetic(firstNumber, secondNumber);
                 basicArithmetic.setFirstNumber(firstNumber);
                 basicArithmetic.setSecondNumber(secondNumber);
-                System.out.println("divided values = " + basicArithmetic.divideFirstAndSecondNumber());;
+                System.out.println("divided values = " + basicArithmetic.divideFirstAndSecondNumber());
             }
             else if(choice == 0){
                 System.out.println("Exiting...");
