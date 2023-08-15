@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-service" />
+        <module name="salary-service" />
         <module name="department-service" />
         <module name="gateway-service" />
         <module name="organization-service" />
@@ -24,6 +25,7 @@
       <module name="employee-service" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
       <module name="organization-service" options="-parameters" />
+      <module name="salary-service" options="-parameters" />
       <module name="task-service" options="-parameters" />
     </option>
   </component>

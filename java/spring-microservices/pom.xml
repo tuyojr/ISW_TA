@@ -30,6 +30,7 @@
         <module>organization-service</module>
         <module>gateway-service</module>
         <module>task-service</module>
+        <module>salary-service</module>
     </modules>
 
     <dependencyManagement>

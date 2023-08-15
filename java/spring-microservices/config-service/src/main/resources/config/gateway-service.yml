@@ -44,6 +44,12 @@ spring:
         - Path=/task/**
         filters:
         - RewritePath=/task/(?<path>.*), /$\{path}
+      - id: salary-service
+        uri: lb://salary-service
+        predicates:
+        - Path=/salary/**
+        filters:
+        - RewritePath=/salary/(?<path>.*), /$\{path}
       - id: openapi
         uri: http://localhost:${server.port}
         predicates:
