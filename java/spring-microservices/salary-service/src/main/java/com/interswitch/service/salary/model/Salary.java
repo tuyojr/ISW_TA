@@ -10,6 +10,7 @@ public class Salary {
 
 	private Long amount;
 	private String date;
+	private Long departmentId;
 	public Salary() {
 		
 	}

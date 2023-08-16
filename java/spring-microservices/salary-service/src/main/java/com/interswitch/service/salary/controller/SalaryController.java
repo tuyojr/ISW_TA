@@ -45,7 +45,8 @@ public class SalaryController {
 		LOGGER.info("Salary find: employeeId={}", employeeId);
 		return repository.findSalariesByEmployeeId(employeeId);
 	}
-	
+
+//	update the department Id field with Id gotten from the feign client
 //	@GetMapping("/salaries/{employeeId}/with-employees")
 //	public List<Salary> findByOrganizationWithEmployees(@PathVariable("employeeId") Long employeeId) {
 //		LOGGER.info("Salary find: employeeId={}", employeeId);
