@@ -17,7 +17,7 @@
   <dependencies>
     <dependency>
       <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-launcher</artifactId>
+      <artifactId>junit-platform-runner</artifactId>
       <version>1.2.0</version>
       <scope>test</scope>
     </dependency>
@@ -33,6 +33,12 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-params</artifactId>
+          <version>5.9.3</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
 
   <build>
@@ -52,6 +58,14 @@
           <additionalClasspathElements>
             <additionalClasspathElement>src/test/java</additionalClasspathElement>
           </additionalClasspathElements>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
         </configuration>
       </plugin>
     </plugins>
