@@ -11,3 +11,4 @@ python/sql
 java/*.java
 *.txt
 *.csv
+/.metadata/
