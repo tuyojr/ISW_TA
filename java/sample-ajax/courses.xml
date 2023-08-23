@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<courses>
+    <course>
+        <course-code>C-0001</course-code>
+        <course-name>C++ Programming</course-name>
+    </course>
+</courses>
