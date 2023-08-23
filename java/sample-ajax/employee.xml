@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<employee>
+    <name>Shino Aburame</name>
+    <phoneNumber>
+        <work>0802398432</work>
+        <home>0802398432</home>
+    </phoneNumber>
+    <address>
+        <city>Konoha</city>
+        <house-no>8, Aburame District</house-no>
+        <postal-code>120010</postal-code>
+        <state>Land Of Fire</state>
+    </address>
+    <department>
+        <name>Kekkei Genkai</name>
+        <manager>
+            <name>Hokage</name>
+            <phone-no>
+                <work>01002303</work>
+            </phone-no>
+        </manager>
+    </department>
+</employee>
