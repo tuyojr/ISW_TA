@@ -2,10 +2,10 @@
 
 <employee>
     <name>Shino Aburame</name>
-    <phoneNumber>
+    <phone-number>
         <work>0802398432</work>
         <home>0802398432</home>
-    </phoneNumber>
+    </phone-number>
     <address>
         <city>Konoha</city>
         <house-no>8, Aburame District</house-no>
@@ -16,9 +16,9 @@
         <name>Kekkei Genkai</name>
         <manager>
             <name>Hokage</name>
-            <phone-no>
+            <phone-number>
                 <work>01002303</work>
-            </phone-no>
+            </phone-number>
         </manager>
     </department>
 </employee>

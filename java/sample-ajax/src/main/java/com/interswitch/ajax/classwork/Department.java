@@ -5,14 +5,14 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement(name = "department")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Department {
     @XmlElement(name = "name")
     private String name;
 
     @XmlElement(name = "manager")
-    private Manager manager = new Manager();
+    private Employee manager;
 
     public String getName() {
         return name;
@@ -22,11 +22,11 @@ public class Department {
         this.name = name;
     }
 
-    public Manager getManager() {
+    public Employee getManager() {
         return manager;
     }
 
-    public void setManager(Manager manager) {
+    public void setManager(Employee manager) {
         this.manager = manager;
     }
 

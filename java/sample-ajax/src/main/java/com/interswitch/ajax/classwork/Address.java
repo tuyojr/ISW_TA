@@ -5,7 +5,7 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement(name = "address")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Address {
     @XmlElement(name = "city")

@@ -5,7 +5,7 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement(name = "phone-number")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PhoneNumber {
     @XmlElement(name = "work")
@@ -32,7 +32,7 @@ public class PhoneNumber {
 
     @Override
     public String toString() {
-        return "PhoneNumber{" +
+        return "Phone Number{" +
                 "work='" + work + '\'' +
                 ", home='" + home + '\'' +
                 '}';
