@@ -10,6 +10,7 @@ import cv2
 import pytesseract
 from PIL import Image, ImageTk
 
+
 def animate_labels():
     for index, label_info in enumerate(labels):
         canvas.move(animated_labels[index], label_info["speed"], 0)  # Move label
@@ -21,9 +22,11 @@ def animate_labels():
 
     splash.after(50, animate_labels)  # Schedule the next animation frame
 
+
 def start_main_window():
     splash.destroy()
     main_window()
+
 
 def main_window():
     Screen = Tk()
@@ -51,34 +54,33 @@ def main_window():
         pygame.mixer.init()
         pygame.mixer.music.load(fp_io)
         pygame.mixer.music.play()
-    
+
     Input_lang = StringVar()
     Output_lang = StringVar()
     # a dictionary of languages and their codes
     Languages = {
         'German': 'de',
-        'English': 'en', 
-        'French': 'fr', 
-        'Spanish': 'es', 
-        'Japanese': 'ja', 
-        'Chinese': 'zh-CN', 
+        'English': 'en',
+        'French': 'fr',
+        'Spanish': 'es',
+        'Japanese': 'ja',
+        'Chinese': 'zh-CN',
         'Russian': 'ru',
-        'Italian': 'it', 
-        'Korean': 'ko', 
+        'Italian': 'it',
+        'Korean': 'ko',
         'Arabic': 'ar',
         'Hindi': 'en'
     }
-    
+
     Input_lang.set('English')
     Output_lang.set('French')
 
-
-    # if the user clicks the text button, the text input will be 
+    # if the user clicks the text button, the text input will be
     # enabled and the speech input will be disabled
     def text_input_button_click():
         # show a messagebox to tell the user to input the text
         tkinter.messagebox.showinfo("Text Input", "Please input the text.")
-    
+
     def speech_input_button_click():
         tkinter.messagebox.showinfo("Speech Input", "Please allow the microphone to record your voice.")
         try:
@@ -91,12 +93,12 @@ def main_window():
             print("Could not request results; {0}".format(e))
         except sr.UnknownValueError:
             print("Unknown error occured")
-    
+
     def image_input_button_click():
         tkinter.messagebox.showinfo("Image Input", "Please wait for the camera to come up and scan your text.")
         # Path to the Tesseract OCR executable (Change this if necessary)
         pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-    
+
         # Initialize the webcam capture
         cap = cv2.VideoCapture(0)
 
@@ -137,7 +139,6 @@ def main_window():
         if exit > 0:
             Screen.destroy()
             return
-        
 
     #################   THREE TOP MOST BUTTON SECTION #################################
     # Calculate the width and height of each button based on the screen width and number of buttons
@@ -149,15 +150,19 @@ def main_window():
     available_width = Screen.winfo_screenwidth() - 2 * padding - (num_buttons - 1) * space_between_buttons
     button_width = available_width // num_buttons
 
-    text_input_button = Button(Screen, text="Text", font=font_nd_size, bg="white", fg="black", command=text_input_button_click, borderwidth=2, relief="ridge")
+    text_input_button = Button(Screen, text="Text", font=font_nd_size, bg="white", fg="black",
+                               command=text_input_button_click, borderwidth=2, relief="ridge")
     text_input_button.place(x=padding, y=10, width=button_width, height=button_height, bordermode=OUTSIDE)
 
-    image_input_button = Button(Screen, text="Image", font=font_nd_size, bg="white",  fg="black", command=image_input_button_click, borderwidth=2, relief="ridge")
-    image_input_button.place(x=padding + button_width + space_between_buttons, y=10, width=button_width, height=button_height, bordermode=OUTSIDE)
+    image_input_button = Button(Screen, text="Image", font=font_nd_size, bg="white", fg="black",
+                                command=image_input_button_click, borderwidth=2, relief="ridge")
+    image_input_button.place(x=padding + button_width + space_between_buttons, y=10, width=button_width,
+                             height=button_height, bordermode=OUTSIDE)
 
-    speech_input_button = Button(Screen, text="Speak", font=font_nd_size, bg="white", fg="black", command=speech_input_button_click, borderwidth=2, relief="ridge")
-    speech_input_button.place(x=padding + 2 * (button_width + space_between_buttons), y=10, width=button_width, height=button_height, bordermode=OUTSIDE)
-
+    speech_input_button = Button(Screen, text="Speak", font=font_nd_size, bg="white", fg="black",
+                                 command=speech_input_button_click, borderwidth=2, relief="ridge")
+    speech_input_button.place(x=padding + 2 * (button_width + space_between_buttons), y=10, width=button_width,
+                              height=button_height, bordermode=OUTSIDE)
 
     TextVar = StringVar()
     OutputVar = StringVar()
@@ -166,7 +171,7 @@ def main_window():
     # Calculate the width and height for the input fields and labels
     field_width = int(Screen.winfo_screenwidth() * 3 / 4) - 40  # 3/4 of the screen width, subtract padding
     field_height_text = 100  # Adjust this value for the desired field height
-    field_height_trans = 150 
+    field_height_trans = 150
 
     # Calculate the x-coordinate to center the input fields and labels
     field_x = (Screen.winfo_screenwidth() - field_width) // 2
@@ -203,19 +208,20 @@ def main_window():
 
     Input_lang_button = OptionMenu(Screen, Input_lang, *Languages)
     Input_lang_button.place(x=button_x, y=100, width=button_width_small, height=button_height_small)
-    Input_lang_button.config(fg="black", highlightcolor="red", highlightbackground= "#47cbed", activebackground="black", activeforeground="#47cbed", font="arial 12")
+    Input_lang_button.config(fg="black", highlightcolor="red", highlightbackground="#47cbed", activebackground="black",
+                             activeforeground="#47cbed", font="arial 12")
 
     Output_lang_button = OptionMenu(Screen, Output_lang, *Languages, command=lambda x: Translate())
-    Output_lang_button.place(x=button_x + button_width_small + space_between_buttons, y=100, width=button_width_small, height=button_height_small)
-    Output_lang_button.config(fg="black", highlightcolor="#47cbed", highlightbackground= "#47cbed", activebackground="black", activeforeground="#47cbed", font="arial 12")
-
+    Output_lang_button.place(x=button_x + button_width_small + space_between_buttons, y=100, width=button_width_small,
+                             height=button_height_small)
+    Output_lang_button.config(fg="black", highlightcolor="#47cbed", highlightbackground="#47cbed",
+                              activebackground="black", activeforeground="#47cbed", font="arial 12")
 
     def Translate():
-        translator = Translator(from_lang = Input_lang.get(), to_lang = Output_lang.get())
+        translator = Translator(from_lang=Input_lang.get(), to_lang=Output_lang.get())
         Translation = translator.translate(TextVar.get())
         OutputVar.set(Translation)
         play_audio(OutputVar.get(), Output_lang.get())
-
 
     #########################     TRANSLATE AND EXIT BUTTON SECTION    ########################
     # Adjust the button width and height for Input_lang and Output_lang buttons
@@ -232,11 +238,11 @@ def main_window():
     translate_icon = Image.open("C:\\Users\\Adedolapo.Olutuyo\\Documents\\ISW_TA\\python\\translate.png")
     translate_icon = translate_icon.resize((32, 32))
     translate_photo = ImageTk.PhotoImage(translate_icon)
-    
+
     speak_icon = Image.open("C:\\Users\\Adedolapo.Olutuyo\\Documents\\ISW_TA\\python\\user-voice-regular-24.png")
     speak_icon = speak_icon.resize((32, 32))
     speak_photo = ImageTk.PhotoImage(speak_icon)
-    
+
     clear_icon = Image.open("C:\\Users\\Adedolapo.Olutuyo\\Documents\\ISW_TA\\python\\clear.png")
     clear_icon = clear_icon.resize((32, 32))
     clear_photo = ImageTk.PhotoImage(clear_icon)
@@ -245,21 +251,27 @@ def main_window():
     exit_icon = exit_icon.resize((32, 32))
     exit_photo = ImageTk.PhotoImage(exit_icon)
 
-    translate_button = Button(Screen, image=translate_photo, compound="left", text="Translate", font="arial 12", bg="#47cbed", command=Translate)
+    translate_button = Button(Screen, image=translate_photo, compound="left", text="Translate", font="arial 12",
+                              bg="#47cbed", command=Translate)
     translate_button.image = translate_photo
-    translate_button.place(x=button_x - 310 , y=580, width=button_width_medium, height=button_height_medium)
+    translate_button.place(x=button_x - 310, y=580, width=button_width_medium, height=button_height_medium)
 
-    speak_again_button = Button(Screen, image=speak_photo, compound="left", text="Play Response Again", font="arial 12", bg="#47cbed", command=lambda: play_audio(OutputVar.get(), Output_lang.get()))
+    speak_again_button = Button(Screen, image=speak_photo, compound="left", text="Play Response Again", font="arial 12",
+                                bg="#47cbed", command=lambda: play_audio(OutputVar.get(), Output_lang.get()))
     speak_again_button.image = speak_photo
     speak_again_button.place(x=button_x, y=580, width=button_width_medium, height=button_height_medium)
 
-    clear_button = Button(Screen, image=clear_photo, compound="left", text="Clear", font="arial 12", bg="#47cbed", command=clear_text)
+    clear_button = Button(Screen, image=clear_photo, compound="left", text="Clear", font="arial 12", bg="#47cbed",
+                          command=clear_text)
     clear_button.image = clear_photo
-    clear_button.place(x=button_x + button_width_medium + space_between_buttons, y=580, width=button_width_medium, height=button_height_medium)
+    clear_button.place(x=button_x + button_width_medium + space_between_buttons, y=580, width=button_width_medium,
+                       height=button_height_medium)
 
-    exit_button = Button(Screen, image=exit_photo, compound="left", text="Exit", font="arial 12", bg="red", fg="#ffffff", command=exit_program)
+    exit_button = Button(Screen, image=exit_photo, compound="left", text="Exit", font="arial 12", bg="red",
+                         fg="#ffffff", command=exit_program)
     exit_button.image = exit_photo
-    exit_button.place(x=button_x + 2 * (button_width_medium + space_between_buttons), y=580, width=button_width_medium, height=button_height_medium)
+    exit_button.place(x=button_x + 2 * (button_width_medium + space_between_buttons), y=580, width=button_width_medium,
+                      height=button_height_medium)
 
     Screen.mainloop()
 
